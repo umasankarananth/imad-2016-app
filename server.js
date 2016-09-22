@@ -20,7 +20,7 @@ var articles : {
                              This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file.
                 
                     </p>`
-};
+},
   articletwo : {
      title : 'Article Two | Uma',
      heading : '',Article Two
@@ -29,7 +29,7 @@ var articles : {
      <p>
                       This is the content for Second file. 
                 </p>`
- };
+ },
   articlethree : {
      title : 'Article Three | Uma',
      heading : '',Article Three
@@ -38,7 +38,7 @@ var articles : {
      <p>
                       This is the content for Third file. 
                 </p>`
- };
+ }
 
 };
 function createTemplate(data){
