@@ -32,7 +32,7 @@ var articles = {
  },
   'article-three' : {
      title : 'Article Three | Uma',
-     heading : '',Article Three
+     heading : 'Article Three',
      date : 'Sep 15, 2016',
      Content : `
      <p>
