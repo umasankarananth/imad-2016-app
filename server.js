@@ -91,7 +91,7 @@ app.get('/submit-name', function(req,res){
     //get the name from  request
     var name = req.query.name;
    // names.push(name);
-    res.send(JSON.Stringify('names'));
+    res.send(JSON.stringify('names'));
 });
 
 app.get('/:articleName', function(req, res){
