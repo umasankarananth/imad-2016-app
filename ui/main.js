@@ -38,7 +38,7 @@ var counter = 0;
                 var request = new XMLHttpRequest();
                 // capture the response & stored in a variable
                 request.onreadystatechange = function(){
-                    if(request.onreadystatechange === XMLHttpRequest.DONE){
+                    if(request.readyState === XMLHttpRequest.DONE){
                             // Take some action
                      if(request.status === 200){
                          
@@ -67,7 +67,7 @@ var counter = 0;
           //Make request to server and send the name
            var nameInput = document.getElementById('name');
            var name = nameInput.value;
-            request.open('GET' ,'http://umasankarananth.imad.hasura-app.io/submit-name?name' + name, true);
+            request.open('GET' ,'http://umasankarananth.imad.hasura-app.io/submit-name?name=' + name, true);
             request.send(null);
       };
      
