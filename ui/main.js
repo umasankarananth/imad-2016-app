@@ -40,13 +40,13 @@ var counter = 0;
                 request.onreadystatechange = function(){
                     if(request.onreadystatechange === XMLHttpRequest.DONE){
                             // Take some action
-                     if(request.status ===200){
+                     if(request.status === 200){
                          
                         //    var counter = request.responseText;
                         //    var span = document.getElementById('count');
                         // span.innerHTML = counter.toString();
                        // }
-               // }
+                        // }
             
                  //counter = counter + 1;
                
@@ -67,7 +67,7 @@ var counter = 0;
           //Make request to server and send the name
            var nameInput = document.getElementById('name');
            var name = nameInput.value;
-            request.open('GET' ,'http://umasankarananth.imad.hasura-app.io/submit-name?name' +name,true);
+            request.open('GET' ,'http://umasankarananth.imad.hasura-app.io/submit-name?name' + name, true);
             request.send(null);
       };
      
