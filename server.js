@@ -18,7 +18,7 @@ var articles = {
     'article-one' : {
     title : 'Article One| Uma ',
     heading : 'Aricle One',
-    date : 'Sep 5, 2016',
+    date : 'Jun 1, 2016',
     Content :     `<p>
                           This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file.
                     </p>
@@ -34,7 +34,7 @@ var articles = {
      title : 'Article Two | Uma',
      heading : 'Article Two',
      date : 'Sep 10, 2016',
-     Content : `
+     content : `
      <p>
                       This is the content for Second file. 
                 </p>`
@@ -43,7 +43,7 @@ var articles = {
      title : 'Article Three | Uma',
      heading : 'Article Three',
      date : 'Sep 15, 2016',
-     Content : `
+     content : `
      <p>
                       This is the content for Third file. 
                 </p>`
