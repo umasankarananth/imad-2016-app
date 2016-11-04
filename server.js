@@ -33,7 +33,7 @@ var articles = {
   'article-two' : {
      title : 'Article Two | Uma',
      heading : 'Article Two',
-     date : 'Sep 10, 2016',
+     date : 'Oct 09, 2016',
      content : `
      <p>
                       This is the content for Second file. 
