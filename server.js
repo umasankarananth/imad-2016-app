@@ -16,10 +16,10 @@ app.use(morgan('combined'));
 
 var articles = {
     'article-one' : {
-    title : 'Article One| Uma ',
+    title : 'article-one',
     heading : 'Aricle One',
     date : 'Jun 1, 2016',
-    Content :     `<p>
+    content :     `<p>
                           This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file. This is the content for first file.
                     </p>
                     <p>
@@ -31,7 +31,7 @@ var articles = {
                     </p>`
 },
   'article-two' : {
-     title : 'Article Two | Uma',
+     title : 'article-two',
      heading : 'Article Two',
      date : 'Sep 10, 2016',
      content : `
@@ -40,7 +40,7 @@ var articles = {
                 </p>`
  },
   'article-three' : {
-     title : 'Article Three | Uma',
+     title : 'article-three',
      heading : 'Article Three',
      date : 'Sep 15, 2016',
      content : `
