@@ -100,7 +100,7 @@ app.get('/articles/:articleName', function(req, res){
   
 });
 app.get('/product-entry', function(req,res){
-   res.send('Welcome User'); 
+   res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
 });
 
 
