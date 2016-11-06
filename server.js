@@ -56,9 +56,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/ui/product-entry', function(req,res){
-   res.send("Welcome User"); 
-});
 
 var pool = new Pool(config);
 app.get('/test-db',function(req,res)
@@ -102,6 +99,10 @@ app.get('/articles/:articleName', function(req, res){
    });
   
 });
+app.get('/ui/product-entry', function(req,res){
+   res.send('Welcome User'); 
+});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
