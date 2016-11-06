@@ -99,7 +99,7 @@ app.get('/articles/:articleName', function(req, res){
    });
   
 });
-app.get('/ui/product-entry', function(req,res){
+app.get('/product-entry', function(req,res){
    res.send('Welcome User'); 
 });
 
