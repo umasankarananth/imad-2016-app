@@ -50,41 +50,6 @@ var htmlTemplate = `
 `;
 return htmlTemplate;
 }
-//function createTemplate(data){
-    var fruitid = data.fruitid;
-    var fruitname = data.fruitname;
-    var fruitrate = data.fruitrate;
-
-var htmlTemplate = `
-<html>
-    <head>
-        <title>
-             WELCOME TO FRUITS SUPER MARKET
-        </title>
-            <meta name ="viewport" content = "width-device-width, initial-scale-1"/>
-            <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class = "container">
-                <div>
-                    <a href= "/">Home</a>
-                </div>
-                <hr>
-                <div>
-                    ${fruitid}
-                </div>    
-                <div>
-                    ${fruitname}
-                </div>
-                <div>
-                   ${fruitrate}
-                </div>
-        </div>        
-    </body>
-</html>
-`;
-return htmlTemplate;
-}
 
 
 app.get('/', function (req, res) {
@@ -106,23 +71,6 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
-app.get('/products/:prodId', function(req,res){
-     pool.query("SELECT * FROM fruitentry WHERE fruitId = $1", [req.params.prodId],function(err,result){
-       if(err){
-           res.status(500).send(err.toString());
-      }else{
-          if(result.rows.length=== 0){
-              res.status(404).send('Fruit not found');
-          }else{
-              var fruitData = result.rows[0];
-              res.send(createTemplate(fruitData));
-          }
-      }
-      
-   });
-  
-});
-
 
 var names = [];
 app.get('/submit-name', function(req,res){
