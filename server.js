@@ -58,11 +58,11 @@ app.get('/', function (req, res) {
 
 
 var pool = new Pool(config);
-app.get('/fruit-details',function(req,res)
+app.get('/fruitentry',function(req,res)
 {
   //Make a select request
   //return the response with the results
-    pool.query("SELECT * FROM fruit-details", function(err,result){
+    pool.query('SELECT * FROM fruitentry', function(err,result){
       if(err){
           res.status(500).send(err.toString());
       }else{
