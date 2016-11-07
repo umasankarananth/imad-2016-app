@@ -71,7 +71,7 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
-app.get('/product-entry.html',function(req,res){
+app.get('/ui/product-entry.html',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
 });
 
