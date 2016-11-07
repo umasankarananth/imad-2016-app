@@ -14,7 +14,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-//function createTemplate(data){
+function createTemplate(data){
     var title = data.title;
     var date = data.date;
     var heading = data.heading;
@@ -50,7 +50,7 @@ var htmlTemplate = `
 `;
 return htmlTemplate;
 }
-function createTemplate(data){
+//function createTemplate(data){
     var fruitid = data.fruitid;
     var fruitname = data.fruitname;
     var fruitrate = data.fruitrate;
@@ -106,7 +106,7 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
-app.get('/products/:prodId', function(req,res){
+//app.get('/products/:prodId', function(req,res){
      pool.query("SELECT * FROM fruitentry WHERE fruitId = $1", [req.params.prodId],function(err,result){
        if(err){
            res.status(500).send(err.toString());
@@ -133,7 +133,7 @@ app.get('/products/:prodId', function(req,res){
     res.send(JSON.stringify(names));
 });
 
-//app.get('/articles/:articleName', function(req, res){
+app.get('/articles/:articleName', function(req, res){
    // var articleName = req.params.articleName;
    //SELECT * FROM article where title = '\'; DELETE WHERE a = '\asd'
    pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName],function(err,result){
