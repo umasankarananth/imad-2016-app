@@ -70,11 +70,14 @@ var htmlTemplate = `
                     <a href= "/">Home</a>
                 </div>
                 <hr>
-                <h3>
-                    ${fruitname}
-                </h3>
                 <div>
-                   ${rate}
+                    ${fruitid}
+                </div>    
+                <div>
+                    ${fruitname}
+                </div>
+                <div>
+                   ${fruitrate}
                 </div>
         </div>        
     </body>
