@@ -71,9 +71,9 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
-app.get('/ui/product-entry.html',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
-});
+//app.get('/product-entry',function(req,res){
+  //  res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
+//});
 
 var names = [];
 app.get('/submit-name', function(req,res){
