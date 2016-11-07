@@ -132,8 +132,21 @@ app.get('/articles/:articleName', function(req, res){
    });
   
 });
-app.get('/product-entry', function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
+app.get('/product-entry/:prodName', function(req,res){
+     pool.query("SELECT * FROM fruitentry WHERE fruitId = $1", [req.params.prodName],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+      }else{
+          if(result.rows.length=== 0){
+              res.status(404).send('Fruit not found');
+          }else{
+              var fruitData = result.rows[0];
+              res.send(createTemplate(fruitData));
+          }
+      }
+      
+   });
+  
 });
 
 
