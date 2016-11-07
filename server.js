@@ -75,6 +75,15 @@ app.get('/product-entry', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
 });
 
+app.get('/prodtransac', function(req,res){
+    res.sendFile(path.join(__dirname, 'ui', 'prodtransac.html'));
+});
+
+app.get('/prodsummary', function(req,res){
+    res.sendFile(path.join(__dirname, 'ui', 'prodsummary.html'));
+});
+
+
 var names = [];
 app.get('/submit-name', function(req,res){
     //get the name from  request
