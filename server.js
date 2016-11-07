@@ -106,7 +106,7 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
-//app.get('/products/:prodId', function(req,res){
+app.get('/products/:prodId', function(req,res){
      pool.query("SELECT * FROM fruitentry WHERE fruitId = $1", [req.params.prodId],function(err,result){
        if(err){
            res.status(500).send(err.toString());
@@ -124,8 +124,8 @@ app.get('/fruitentry',function(req,res)
 });
 
 
-//var names = [];
-//app.get('/submit-name', function(req,res){
+var names = [];
+app.get('/submit-name', function(req,res){
     //get the name from  request
    // var name = req.params.name;
    var name= req.query.name;
