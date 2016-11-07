@@ -14,7 +14,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-
 //function createTemplate(data){
     var title = data.title;
     var date = data.date;
@@ -104,9 +103,26 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
+app.get('/product-entry/:prodId', function(req,res){
+     pool.query("SELECT * FROM fruitentry WHERE fruitId = $1", [req.params.prodId],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+      }else{
+          if(result.rows.length=== 0){
+              res.status(404).send('Fruit not found');
+          }else{
+              var fruitData = result.rows[0];
+              res.send(createTemplate(fruitData));
+          }
+      }
+      
+   });
+  
+});
 
-var names = [];
-app.get('/submit-name', function(req,res){
+
+//var names = [];
+//app.get('/submit-name', function(req,res){
     //get the name from  request
    // var name = req.params.name;
    var name= req.query.name;
@@ -114,7 +130,7 @@ app.get('/submit-name', function(req,res){
     res.send(JSON.stringify(names));
 });
 
-app.get('/articles/:articleName', function(req, res){
+//app.get('/articles/:articleName', function(req, res){
    // var articleName = req.params.articleName;
    //SELECT * FROM article where title = '\'; DELETE WHERE a = '\asd'
    pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName],function(err,result){
@@ -126,22 +142,6 @@ app.get('/articles/:articleName', function(req, res){
           }else{
               var articleData = result.rows[0];
               res.send(createTemplate(articleData));
-          }
-      }
-      
-   });
-  
-});
-app.get('/product-entry/:prodName', function(req,res){
-     pool.query("SELECT * FROM fruitentry WHERE fruitId = $1", [req.params.prodName],function(err,result){
-       if(err){
-           res.status(500).send(err.toString());
-      }else{
-          if(result.rows.length=== 0){
-              res.status(404).send('Fruit not found');
-          }else{
-              var fruitData = result.rows[0];
-              res.send(createTemplate(fruitData));
           }
       }
       
