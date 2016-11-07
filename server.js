@@ -62,7 +62,7 @@ app.get('/fruit-details',function(req,res)
 {
   //Make a select request
   //return the response with the results
-    pool.query('SELECT * FROM fruit', function(err,result){
+    pool.query("SELECT * FROM fruit", function(err,result){
       if(err){
           res.status(500).send(err.toString());
       }else{
