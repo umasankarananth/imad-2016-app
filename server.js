@@ -71,7 +71,7 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
-app.get('/fruitdb', function(req,res){
+app.get('/product-entry', function(req,res){
 //res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
 //  Make a select request
  // return the response with the results
@@ -110,7 +110,7 @@ app.get('/prodsummary', function(req,res){
 
 
 var names = [];
-app.get('/product-entry', function(req,res){
+app.get('/submit-name', function(req,res){
     //get the name from  request
      var name = req.params.name;
    //var name= req.query.name;
