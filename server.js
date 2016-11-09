@@ -76,7 +76,7 @@ app.get('/product-entry/', function(req,res){
 //res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
 //  Make a select request
  // return the response with the results
-    pool.query("SELECT * FROM fruitentry ", function(err,result){
+    pool.query("SELECT * FROM fruitentry where fruitId = 2 ", function(err,result){
       if(err){
           res.status(500).send(err.toString());
       }else{
@@ -84,7 +84,7 @@ app.get('/product-entry/', function(req,res){
               res.status(404).send('fruit not found');
           }else{
               
-              var fruitData =result.rows;
+              var fruitData =result.rows[0];
               fruitlist.push(fruitData);
               res.send(JSON.stringify(fruitlist));
           }
