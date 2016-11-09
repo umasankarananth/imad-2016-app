@@ -76,7 +76,7 @@ app.get('/product-entry/', function(req,res){
 //res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
 //  Make a select request
  // return the response with the results
-    pool.query("SELECT * FROM fruitentry", function(err,result){
+    pool.query('SELECT * FROM fruitentry WHERE "fruitName" = "apple"', function(err,result){
       if(err){
           res.status(500).send(err.toString());
       }else{
