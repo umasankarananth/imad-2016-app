@@ -31,7 +31,7 @@
              
                     // var names = ['name1', 'name2', 'name3','name4'];
           //capture the list of names and render it as a list
-                    var fruitlist= request.responseText;
+                    var fruitlist= ['apple','orange','grapes'];
                     fruitlist = JSON.parse(fruitlist);
                     var list ='';
                     for(var i = 0; i< fruitlist.length; i++){
