@@ -71,6 +71,7 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
+var fruitlist =[];
 app.get('/product-entry', function(req,res){
 //res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
 //  Make a select request
@@ -82,8 +83,10 @@ app.get('/product-entry', function(req,res){
           if(result.rows.length=== 0){
               res.status(404).send('fruit not found');
           }else{
-              var fruitData =result.rows;
-              res.send(fruitData);
+              
+              var fruitData =result.rows[0];
+              fruitlist.push(fruitData);
+              res.send(JSON.stringify(fruitlist));
           }
       
       }
