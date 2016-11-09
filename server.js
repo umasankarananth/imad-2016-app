@@ -59,8 +59,8 @@ app.get('/', function (req, res) {
 var names = [];
 app.get('/submit-name', function(req,res){
     //get the name from  request
-   //  var name = req.params.name;
-   var name= req.query.name;
+     var name = req.params.name;
+   //var name= req.query.name;
     names.push(name);
     res.send(JSON.stringify(names));
 });
@@ -116,7 +116,7 @@ app.get('/prodtransac', function(req,res){
 });
 
 app.get('/prodsummary', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'prodsummary.html'));
+  //  res.sendFile(path.join(__dirname, 'ui', 'prodsummary.html'));
 });
 
 app.get('/ui/main.js', function(req,res){
