@@ -82,7 +82,7 @@ app.get('/product-entry', function(req,res){
           if(result.rows.length=== 0){
               res.status(404).send('fruit not found');
           }else{
-              var fruitData = result.rows;
+              var fruitData =(JSON.stringify(result.rows));
               res.send(fruitData);
           }
       
