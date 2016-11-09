@@ -17,7 +17,7 @@
                 var request = new XMLHttpRequest();
            // capture the response & stored in a variable
                  request.onreadystatechange = function(){
-                 if(request.readystate === XMLHttpRequest.DONE){
+                 if(request.readyState === XMLHttpRequest.DONE){
            // Take some action
                  if(request.status === 200){
                          
