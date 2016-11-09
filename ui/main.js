@@ -32,10 +32,10 @@
                     // var names = ['name1', 'name2', 'name3','name4'];
           //capture the list of names and render it as a list
                     //var fruitlist= ['apple','orange','grapes'];
-                    fruitlist = JSON.parse(fruitlist);
+                    names = JSON.parse(names);
                     var list ='';
-                    for(var i = 0; i< fruitlist.length; i++){
-                    list += '<li>' + fruitlist[i] +'</li>';
+                    for(var i = 0; i< names.length; i++){
+                    list += '<li>' + names[i] +'</li>';
                     }
                     var ul = document.getElementById('namelist');
                     ul.innerHTML = list;
@@ -44,9 +44,9 @@
                  //Not done yet
             };
           //Make request to server and send the name
-                    // var nameInput = document.getElementById('name');
-                    // var name = nameInput.value;
-                     request.open('GET' ,'http://umasankarananth.imad.hasura-app.io/product-entry', true);
+                     var nameInput = document.getElementById('name');
+                     var name = nameInput.value;
+                     request.open('GET' ,'http://umasankarananth.imad.hasura-app.io/submitname', true);
                      request.send(null);
     };
      
