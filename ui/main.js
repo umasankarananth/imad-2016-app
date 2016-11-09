@@ -11,8 +11,8 @@
   
   //SUBMIT NAME
   
-  var submit = document.getElementById('sub_btn');
-  submit.onclick = function(){
+  var sub = document.getElementById('sub_btn');
+  sub.onclick = function(){
            //Create a request Object
                 var request = new XMLHttpRequest();
            // capture the response & stored in a variable
@@ -29,10 +29,10 @@
         
                     //counter = counter + 1;
              
-                     var names = ['name1', 'name2', 'name3','name4'];
+                     //var names = ['name1', 'name2', 'name3','name4'];
           //capture the list of names and render it as a list
                     //var fruitlist= ['apple','orange','grapes'];
-                    //var names = request.responseText;
+                    var names = request.responseText;
                     names = JSON.parse(names);
                     var list ='';
                     for(var i = 0; i< names.length; i++){
