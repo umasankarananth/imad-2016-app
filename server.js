@@ -72,24 +72,24 @@ app.get('/fruitentry',function(req,res)
   
 });
 app.get('/product-entry', function(req,res){
-
+res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
   //Make a select request
   //return the response with the results
-    pool.query('SELECT * FROM fruitentry', function(err,result){
-      if(err){
-          res.status(500).send(err.toString());
-      }else{
-          if(result.rows.length=== 0){
-              res.status(404).send('fruit not found');
-          }else{
-              var fruitData =(JSON.stringify(result.rows));
-              res.send(fruitData);
-          }
+   // pool.query('SELECT * FROM fruitentry', function(err,result){
+     // if(err){
+       //   res.status(500).send(err.toString());
+      //}else{
+        //  if(result.rows.length=== 0){
+          //    res.status(404).send('fruit not found');
+         // }else{
+           //   var fruitData =result.rows;
+             // res.send(fruitData);
+          //}
       
-      }
+      //}
   });
   
-});
+//});
 
 
 app.get('/welcomeform', function(req,res){
