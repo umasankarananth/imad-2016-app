@@ -46,7 +46,7 @@
           //Make request to server and send the name
                      var nameInput = document.getElementById('name');
                      var name = nameInput.value;
-                     request.open('GET' ,'http://umasankarananth.imad.hasura-app.io/submitname', true);
+                     request.open('GET' ,'http://umasankarananth.imad.hasura-app.io/submitname?name' + name, true);
                      request.send(null);
     };
      
