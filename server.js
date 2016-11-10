@@ -118,7 +118,7 @@ app.get('/submit-name', function(req,res){
     res.send(JSON.stringify(names));
 });
 
-
+var pool = new Pool(config);
 app.get('/fruitentry',function(req,res)
 {
   //Make a select request
@@ -132,7 +132,7 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
-var pool = new Pool(config);
+
 app.get('/fruittrans',function(req,res)
 {
   //Make a select request
@@ -148,11 +148,11 @@ app.get('/fruittrans',function(req,res)
 });
 
 
-app.get('/:prod', function(req,res){
+app.get('/product-entry', function(req,res){
 //  Make a select request
  // return the response with the results
-    pool.query("SELECT * FROM fruitentry WHERE fruitgroup ='" +req.params.prod+"'", function(err,result){
-   
+   // pool.query("SELECT * FROM fruitentry WHERE fruitgroup ='" +req.params.prod+"'", function(err,result){
+       pool.query('SELECT * FROM fruitentry', function(err,result){
       if(err){
           res.status(500).send(err.toString());
       }else{
