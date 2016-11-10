@@ -14,23 +14,23 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var products = {
- 'prod':{
+//var products = {
+var prod={
     fruitId : 1,
      fruitName :  'apple',
      rate : 30
-     },
-  'trans':{    
-      fruitName : 'apple',
-      quantity : 5
-        }
+   //  },
+  //'trans':{    
+    //  fruitName : 'apple',
+      //quantity : 5
+        //}
 };
 function create(dt){
     var fruitId = dt.fruitId;
     var fruitName =  dt.fruitName;
     var rate = dt.rate;
     //var fname = dt.fname;
-    var quantity = dt.quantity;
+ //   var quantity = dt.quantity;
 
 var prodTemplate =` 
 <html>
@@ -71,50 +71,51 @@ var prodTemplate =`
 </div>
 </body>
 </html>
- `,
- 
- ` <html>
-    <head>
-       <title>CHESNUT FRUITS> </title>
-         <meta name ="viewport" content = "width-device-width, initial-scale-1"/>
-         <link href="/ui/style.css" rel="stylesheet" />
-    </head>  
- 
-     <body>
-         <div class = "container">
-             <div class = "center">
-                 <H2>TRANSACTION FORM</H2>
-                 <div align="left">
-                 <a href= "/">Home</a>
-                 </div>
-                 <div align = "right">
-                 <a href="/product-entry" align="right">Previous</a>
-                 <a href = "/prodsummary" align = "right">Next</a>
-                 </div>
-                 <hr/> 
-                 <div>
-                 <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ6ea2NnLWN_eAer9-uW_nYpQZ_5jMxXqYh2aEsw0uBuc9WdSrv" class="img-medium" align = "left">
-                 </div>
-                 <div>
-                 <h3>Enter the fruit name :</h3>
-                 <input type = "text" id = "fname" placeholder = "Enter fruitname">
-                  ${fruitName} 
-                 </div>
-                 
-                 Enter the quantity :
-                 <input type = "text" id="quantity" placeholder = "Enter Quantity">  ${quantity} 
-                 <input type = "submit" id="calculate-btn" value = "Evaluate"> <br/>
-                 The Amount you have to pay :
-                 <input type = "text" id="amount" placeholder = "0"></h3>
-                 </div>
-           </div>
-      </div> 
-      </body>
-</html>
-`;
-return prodTemplate;
-
+ `;
+ return prodTemplate;
 }
+// ` <html>
+//    <head>
+  //     <title>CHESNUT FRUITS> </title>
+    //     <meta name ="viewport" content = "width-device-width, initial-scale-1"/>
+      //   <link href="/ui/style.css" rel="stylesheet" />
+//    </head>  
+ 
+  //   <body>
+    //     <div class = "container">
+      //       <div class = "center">
+        //         <H2>TRANSACTION FORM</H2>
+          //       <div align="left">
+            //     <a href= "/">Home</a>
+              //   </div>
+                // <div align = "right">
+//                 <a href="/product-entry" align="right">Previous</a>
+  //               <a href = "/prodsummary" align = "right">Next</a>
+    //             </div>
+      //           <hr/> 
+        //         <div>
+          //       <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ6ea2NnLWN_eAer9-uW_nYpQZ_5jMxXqYh2aEsw0uBuc9WdSrv" //class="img-medium" align = "left">
+                // </div>
+//                 <div>
+  //               <h3>Enter the fruit name :</h3>
+    //             <input type = "text" id = "fname" placeholder = "Enter fruitname">
+      //            ${fruitName} 
+        //         </div>
+                 
+          //       Enter the quantity :
+            //     <input type = "text" id="quantity" placeholder = "Enter Quantity">  ${quantity} 
+              //   <input type = "submit" id="calculate-btn" value = "Evaluate"> <br/>
+                // The Amount you have to pay :
+//                 <input type = "text" id="amount" placeholder = "0"></h3>
+  //               </div>
+    //       </div>
+      //</div> 
+      //</body>
+//</html>
+//`;
+//return prodTemplate;
+
+//}
 
 function createTemplate(data){
     var title = data.title;
