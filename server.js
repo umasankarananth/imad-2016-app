@@ -56,15 +56,6 @@ var prodTemplate =`
      ${fruitId}
       ${fruitName}
      ${rate}
-     // <table align = "center" border = "1">
-      //<tr>
-    //     <th>FRUITID </th> <th> FRUITNAME</th> <th>RATE</th>
-      //</tr>
-      //<tr>
-        //  <td>${fruitId}</td>
-          //<td>${fruitName}</td>
-          //<td>${rate}</td>
-      //</table>
     </div> 
     </div>
 </div>
