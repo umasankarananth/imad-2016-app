@@ -136,7 +136,7 @@ app.get('/fruitentry',function(req,res)
 app.get('/:prod', function(req,res){
 //  Make a select request
  // return the response with the results
-    pool.query("SELECT * FROM fruitentry WHERE fruitId ='" +req.params.prod+"'", function(err,result){
+    pool.query("SELECT * FROM fruitentry WHERE fruitgroup ='" +req.params.prod+"'", function(err,result){
    // prod = req.params.prod;
   //  pool.query("SELECT * FROM fruitentry", function(err,result){
       if(err){
