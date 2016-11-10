@@ -132,11 +132,11 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
-app.get('/fruittransac',function(req,res)
+app.get('/fruittrans',function(req,res)
 {
   //Make a select request
   //return the response with the results
-    pool.query('SELECT * FROM fruittransac', function(err,result){
+    pool.query('SELECT * FROM fruittrans', function(err,result){
       if(err){
           res.status(500).send(err.toString());
       }else{
