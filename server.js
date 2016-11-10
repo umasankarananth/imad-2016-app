@@ -21,13 +21,16 @@ var products = {
      rate : 30
      },
   'trans':{    
-      fruit
-  }
+      fname : 'apple',
+      quantity : 5,
+        }
 };
 function create(dt){
     var fruitId = dt.fruitId;
     var fruitName =  dt.fruitName;
     var rate = dt.rate;
+    var fname = dt.fname;
+    var quantity = dt.quantity;
 
 var prodTemplate =` 
 <html>
