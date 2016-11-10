@@ -16,8 +16,8 @@ app.use(morgan('combined'));
 
 function create(dt){
     var fruitId = dt.fruitId;
-    var fruitName :   dt.fruitName;
-    var rate : dt.rate;
+    var fruitName =  dt.fruitName;
+    var rate = dt.rate;
 
 var prodTemplate =` 
 <html>
