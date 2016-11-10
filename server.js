@@ -210,15 +210,16 @@ app.get('/welcomeform', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'welcomeform.html'));
 });
 
-app.get('/:prodName', function(req,res){
-    var prodName = req.params.prodName;
-        res.send(create(products[prodName]));  
-});
-
-
-//app.get('/product-entry', function(req,res){
-  //  res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
+//app.get('/:prodName', function(req,res){
+ //   var prodName = req.params.prodName;
+   //     res.send(create(products[prodName]));  
 //});
+
+
+app.get('/product-entry', function(req,res){
+  //  res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
+ res.send(create(prod));
+});
 
 app.get('/prodtransac', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'prodtransac.html'));
