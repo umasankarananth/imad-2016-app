@@ -51,7 +51,7 @@ var prodTemplate =`
      <br>
      <div align = "right">
      <h3>Differnt Fruits In Our shop</h3>
-      <h4>FRUITID </t>    FRUITNAME </t>   RATE  
+      <h4>FRUITID </t> </t>   FRUITNAME </t> </t>  RATE  <br/>
       ${fruitId}
       
      ${fruitName}
