@@ -14,13 +14,14 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var prod={
+var products = {
+ 'prod':{
     fruitId : 1,
      fruitName :  'apple',
      rate : 30
-
+     },
+  'trans':{     
 };
-
 function create(dt){
     var fruitId = dt.fruitId;
     var fruitName =  dt.fruitName;
