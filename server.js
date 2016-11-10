@@ -128,6 +128,27 @@ app.get('/orange', function (req, res) {
   
 });
 
+app.get('/apple', function (req, res) {
+    //Make a select request
+  //return the response with the results
+   // pool.query("SELECT * FROM fruitprice where fruitName ='" +req.params.fname +"'", function(err,result){
+      pool.query('SELECT * FROM fruitprice',function(err,result){
+       if(err){
+          res.status(500).send(err.toString());
+      }else{
+          if(result.rows.length=== 0){
+              res.status(404).send('fruit not found');
+          }else{
+               
+               var frutData =result.rows[1];
+               res.send(create(frutData));
+                } 
+     
+          }
+
+  });
+  
+});
 
 var names = [];
 app.get('/submit-name', function(req,res){
