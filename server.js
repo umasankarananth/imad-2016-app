@@ -145,10 +145,10 @@ app.get('/product-entry', function(req,res){
           if(result.rows.length=== 0){
               res.status(404).send('fruit not found');
           }else{
-               var fruitData =result.rows[0];
-              
-              res.send(create(fruitData));
-          } 
+               
+               var fruitData =result.rows[i];
+               res.send(create(fruitData));
+                        } 
      
           }
 
