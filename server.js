@@ -15,7 +15,7 @@ var app = express();
 app.use(morgan('combined'));
 
 //var products = {
-var prod={
+var prod = {
     fruitId : 1,
      fruitName :  'apple',
      rate : 30
