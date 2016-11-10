@@ -38,7 +38,7 @@ var fruitTemplate =`
  <body>
  <div class = "container">
  <div class = "center">
-  <H1> ORANGE </H1>
+  <H1> $fruheading </H1>
   <div align="left">
   <a href="/">Home</a>
   </div>
@@ -47,7 +47,8 @@ var fruitTemplate =`
  </div>
  <hr/> 
  <div>
- <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTtFPCG_24fGo4w-pT0B0UAo6uDyTmmQTL7jIJOevrzb2RIcxePYw" class="img-medium"> 
+// <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTtFPCG_24fGo4w-pT0B0UAo6uDyTmmQTL7jIJOevrzb2RIcxePYw" class="img-medium"> 
+ $fruimage
  </div>
  <br>
  <div class = "bold">
