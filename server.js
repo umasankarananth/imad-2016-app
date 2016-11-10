@@ -51,13 +51,16 @@ var prodTemplate =`
      <br>
      <div align = "right">
      <h3>Differnt Fruits In Our shop</h3>
-      <h4>FRUITID </t> </t>   FRUITNAME </t> </t>  RATE  <br/>
-      ${fruitId}
-      
-     ${fruitName}
+      <table>
+      <tr>
+         <th>FRUITID </th><th> FRUITNAME</th><th>RATE</th>
+      </tr>
+      <tr>
+          <td>${fruitId}</td>
+          <td>${fruitName}</td>
+          <td>${rate}</td>
+      </table>
      
-     ${rate}
-     </h4>
     </div>
 </div>
 </body>
