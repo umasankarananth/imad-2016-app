@@ -53,8 +53,8 @@ var prodTemplate =`
      <div>
      <h3>Differnt Fruits In Our shop</h3>
      <h3>FRUITSID    FRUITNAME    RATE </h3>
-     ${fruitId}
-      ${fruitName}
+     ${fruitId} <\t>
+      ${fruitName}<\t>
      ${rate}
     </div> 
     </div>
@@ -137,8 +137,7 @@ app.get('/:prod', function(req,res){
 //  Make a select request
  // return the response with the results
     pool.query("SELECT * FROM fruitentry WHERE fruitgroup ='" +req.params.prod+"'", function(err,result){
-   // prod = req.params.prod;
-  //  pool.query("SELECT * FROM fruitentry", function(err,result){
+   
       if(err){
           res.status(500).send(err.toString());
       }else{
