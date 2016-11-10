@@ -21,7 +21,7 @@ var products = {
      rate : 30
      },
   'trans':{    
-      fruitName : 'apple',
+      fname : 'apple',
       quantity : 5
         }
 };
@@ -106,6 +106,8 @@ var prodTemplate =`
                  <br/>
                   Total Amount :
                  <input type = "text" id="amount" placeholder = "0" size="40"></h3>
+                 ${fname}
+                 ${quantity}
                  </div>
            </div>
       </div> 
