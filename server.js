@@ -148,7 +148,7 @@ app.get('/fruittrans',function(req,res)
 });
 
 
-app.get('/product-entry', function(req,res){
+app.get('/:prod', function(req,res){
 //  Make a select request
  // return the response with the results
    // pool.query("SELECT * FROM fruitentry WHERE fruitgroup ='" +req.params.prod+"'", function(err,result){
