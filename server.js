@@ -50,7 +50,7 @@ var fruitTemplate =`
  <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTtFPCG_24fGo4w-pT0B0UAo6uDyTmmQTL7jIJOevrzb2RIcxePYw" class="img-medium"> 
  </div>
  <br>
- div class="bold">
+ <div class = "bold">
   Fruit Name : ${fruitName}
   <br/>
   Rate Per kg : ${ratePerKg}
