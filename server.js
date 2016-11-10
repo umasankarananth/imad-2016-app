@@ -146,7 +146,7 @@ app.get('/product-entry', function(req,res){
               res.status(404).send('fruit not found');
           }else{
                
-               var fruitData =result.rows;
+               var fruitData =result.rows[0];
                res.send(create(fruitData));
                 } 
      
