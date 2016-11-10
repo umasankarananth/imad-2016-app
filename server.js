@@ -20,6 +20,7 @@ var product={
     rate : 30
 };
 
+
 function createTemplate(data){
     var title = data.title;
     var date = data.date;
@@ -112,6 +113,11 @@ app.get('/fruitentry',function(req,res)
 app.get('/welcomeform', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'welcomeform.html'));
 });
+
+app.get('/product-entry', function(req,res){
+    res.send(product);  
+});
+
 
 //app.get('/product-entry', function(req,res){
   //  res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
