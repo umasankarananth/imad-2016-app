@@ -21,7 +21,7 @@ var products = {
      rate : 30
      },
   'trans':{    
-      fname : 'apple',
+      fruitName : 'apple',
       quantity : 5
         }
 };
@@ -29,7 +29,7 @@ function create(dt){
     var fruitId = dt.fruitId;
     var fruitName =  dt.fruitName;
     var rate = dt.rate;
-    var fname = dt.fname;
+    //var fname = dt.fname;
     var quantity = dt.quantity;
 
 var prodTemplate =` 
@@ -96,8 +96,9 @@ var prodTemplate =`
                  <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ6ea2NnLWN_eAer9-uW_nYpQZ_5jMxXqYh2aEsw0uBuc9WdSrv" class="img-medium" align = "left">
                  </div>
                  <div>
-                 <h3>Enter the fruit name :
-                 <input type = "text" id="fname" placeholder = "Enter fruitname"> ${fname} 
+                 <h3>Enter the fruit name :</h3>
+                 <input type = "text" id = "fname" placeholder = "Enter fruitname">
+                  ${fruitName} 
                  </div>
                  
                  Enter the quantity :
