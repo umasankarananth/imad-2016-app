@@ -129,7 +129,7 @@ app.get('/orange', function (req, res) {
 });
 
 app.get('/apple', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'apple.html'));
+   // res.sendFile(path.join(__dirname, 'ui', 'apple.html'));
     //Make a select request
   //return the response with the results
    // pool.query("SELECT * FROM fruitprice where fruitName ='" +req.params.fname +"'", function(err,result){
@@ -148,6 +148,13 @@ app.get('/apple', function (req, res) {
       });
   
 });
+app.get('/grapes', function (req, res) {
+    res.sendFile(path.join(__dirname, 'ui', 'grapes.html'));
+});
+  
+
+  
+
 
 var names = [];
 app.get('/submit-name', function(req,res){
