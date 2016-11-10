@@ -14,7 +14,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-
 //var prod = {
    // fruitId : 1,
     // fruitName :  'apple',
