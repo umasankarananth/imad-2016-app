@@ -38,7 +38,7 @@ var prodTemplate =`
  <div class = "container">
      <div class = "center">
          <H2> ENTRY FORM</H2>
-     </div>
+     
          <a href="/">Home</a>
        <div align="right">
          <a href = "/welcomeform">Previous</a>         
@@ -60,7 +60,7 @@ var prodTemplate =`
           <td>${fruitName}</td>
           <td>${rate}</td>
       </table>
-     
+    </div> 
     </div>
 </div>
 </body>
