@@ -14,12 +14,15 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var product={ 
+function create(dt)
+{
+var product ={ 
     fruitId : 1,
     fruitName :'apple',
     rate : 30
 };
-
+return product;
+}
 
 function createTemplate(data){
     var title = data.title;
@@ -114,8 +117,9 @@ app.get('/welcomeform', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'welcomeform.html'));
 });
 
-app.get('/product-entry', function(req,res){
-    res.send(product);  
+app.get('/:product', function(req,res){
+    var product = req.params.product;
+        res.send(product);  
 });
 
 
