@@ -59,7 +59,7 @@ var prodTemplate =`
 </html>
  `;   
 return prodTemplate;
-};
+}
 
 function createTemplate(data){
     var title = data.title;
