@@ -72,8 +72,7 @@ var prodTemplate =`
 </body>
 </html>
  `;
- return prodTemplate;
-}
+
 // ` <html>
 //    <head>
   //     <title>CHESNUT FRUITS> </title>
@@ -96,18 +95,17 @@ var prodTemplate =`
         //         <div>
           //       <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ6ea2NnLWN_eAer9-uW_nYpQZ_5jMxXqYh2aEsw0uBuc9WdSrv" //class="img-medium" align = "left">
                 // </div>
-//                 <div>
-  //               <h3>Enter the fruit name :</h3>
-    //             <input type = "text" id = "fname" placeholder = "Enter fruitname">
-      //            ${fruitName} 
-        //         </div>
-                 
-          //       Enter the quantity :
-            //     <input type = "text" id="quantity" placeholder = "Enter Quantity">  ${quantity} 
-              //   <input type = "submit" id="calculate-btn" value = "Evaluate"> <br/>
-                // The Amount you have to pay :
-//                 <input type = "text" id="amount" placeholder = "0"></h3>
-  //               </div>
+                 <div align = "left">
+                 <h3>Enter the fruit name :
+                 <input type = "text" id="fname" placeholder = "Enter fruitname" size = "30"><br/>
+                  Enter the quantity :
+                 <input type = "text" id="quantity" placeholder = "Enter Quantity" size = "30"><br>
+                 <br/>
+                 <input type = "submit" id="calculate-btn" value = "Evaluate" size = 30> <br/>
+                 <br/>
+                  Total Amount :
+                 <input type = "text" id="amount" placeholder = "0" size="40"></h3>
+                 </div>
     //       </div>
       //</div> 
       //</body>
