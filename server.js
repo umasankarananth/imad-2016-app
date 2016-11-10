@@ -14,17 +14,14 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var products = {
- 'prod' : {
+
+var prod = {
     fruitId : 1,
      fruitName :  'apple',
      rate : 30
-     },
-  'trans':{    
-      fname : 'apple',
-      quantity : 5
-        }
-};
+     };
+  
+
 function create(dt){
     var fruitId = dt.fruitId;
     var fruitName =  dt.fruitName;
@@ -116,10 +113,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:prodName', function(req,res){
-    var prodName = req.params.prodName;
-        res.send(create(products[prodName]));  
-});
+
 
 
 var names = [];
@@ -173,15 +167,17 @@ app.get('/welcomeform', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'welcomeform.html'));
 });
 
-
-
-//app.get('/product-entry', function(req,res){
-  //  res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
-// res.send(create(prod));
+app.get('/product-entry', function(req,res){
+ res.send(create(prod));
 });
 
-//app.get('/prodtransac', function(req,res){
-//    res.sendFile(path.join(__dirname, 'ui', 'prodtransac.html'));
+app.get('/prodtransac', function(req,res){
+    res.sendFile(path.join(__dirname, 'ui', 'prodtransac.html'));
+});
+
+//app.get('/:prodName', function(req,res){
+  //  var prodName = req.params.prodName;
+    //    res.send(create(products[prodName]));  
 //});
 
 app.get('/prodsummary', function(req,res){
