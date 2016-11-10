@@ -188,7 +188,7 @@ app.get('/prodtransac', function(req,res){
               res.status(404).send('fruit not found');
           }else{
                
-               var fruitData =result.rows;
+               var fruitData =result.rows[1];
                res.send(create(fruitData));
                 } 
      
