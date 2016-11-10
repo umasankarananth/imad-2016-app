@@ -21,6 +21,7 @@ var products = {
      rate : 30
      },
   'trans':{     
+  }
 };
 function create(dt){
     var fruitId = dt.fruitId;
