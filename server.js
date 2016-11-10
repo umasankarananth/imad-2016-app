@@ -103,10 +103,28 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var pool = new Pool(config);
 app.get('/orange', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'orange.html'));
-});
+  //res.sendFile(path.join(__dirname, 'ui', 'orange.html'));
+  //Make a select request
+  //return the response with the results
+    pool.query('SELECT * FROM fruitprice', function(err,result){
+       if(err){
+          res.status(500).send(err.toString());
+      }else{
+          if(result.rows.length=== 0){
+              res.status(404).send('fruit not found');
+          }else{
+               
+               var fruitData =result.rows[0];
+               res.send(create(fruitData));
+                } 
+     
+          }
 
+  });
+  
+});
 
 
 var names = [];
@@ -118,26 +136,12 @@ app.get('/submit-name', function(req,res){
     res.send(JSON.stringify(names));
 });
 
-var pool = new Pool(config);
+
 app.get('/fruitentry',function(req,res)
 {
   //Make a select request
   //return the response with the results
     pool.query('SELECT * FROM fruitentry', function(err,result){
-      if(err){
-          res.status(500).send(err.toString());
-      }else{
-          res.send(JSON.stringify(result.rows));
-      }
-  });
-  
-});
-
-app.get('/fruittrans',function(req,res)
-{
-  //Make a select request
-  //return the response with the results
-    pool.query('SELECT * FROM fruittrans', function(err,result){
       if(err){
           res.status(500).send(err.toString());
       }else{
@@ -178,26 +182,6 @@ app.get('/welcomeform', function(req,res){
 //app.get('/product-entry', function(req,res){
 // res.send(create(prod));
 //});
-
-app.get('/prodtransac', function(req,res){
-    pool.query('SELECT * from fruittrans',function(err,result){
-      if(err){
-          res.status(500).send(err.toString());
-      }else{
-          if(result.rows.length=== 0){
-              res.status(404).send('fruit not found');
-          }else{
-               
-               var fruitData =result.rows[1];
-               res.send(create(fruitData));
-                } 
-     
-          }
-
-  });
-  
-});
-   // res.sendFile(path.join(__dirname, 'ui', 'prodtransac.html'));
 
 
 //app.get('/:prodName', function(req,res){
