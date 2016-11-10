@@ -137,12 +137,12 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
-//var fruitlist =[];
-app.get('/:prod', function(req,res){
+
+app.get('/product-entry', function(req,res){
 //  Make a select request
  // return the response with the results
     //pool.query("SELECT * FROM fruitentry WHERE title ='" +req.params.prod+"'", function(err,result){
-    prod = req.params.prod;
+   // prod = req.params.prod;
     pool.query("SELECT * FROM fruitentry", function(err,result){
       if(err){
           res.status(500).send(err.toString());
@@ -152,8 +152,8 @@ app.get('/:prod', function(req,res){
           }else{
               
               var fruitData =result.rows;
-              //fruitlist.push(fruitData);
-              res.send(JSON.stringify(fruitData));
+              //res.send(JSON.stringify(fruitData));
+              res.send(create(fruitData));
           }
       
       }
