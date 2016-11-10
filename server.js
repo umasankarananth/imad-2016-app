@@ -20,6 +20,35 @@ function create(dt){
     rate : dt.rate;
 
 var prodTemplate =` 
+<html>
+<head>
+  <title>CHESNUT FRUITS> </title>
+         <meta name ="viewport" content = "width-device-width, initial-scale-1"/>
+         <link href="/ui/style.css" rel="stylesheet" />
+</head>  
+ 
+ <body>
+ <div class = "container">
+ <div class = "center">
+ <H2> ENTRY FORM</H2>
+ </div>
+ <a href="/">Home</a>
+ <div align="right">
+ <a href = "/welcomeform">Previous</a>         
+ <a href= "/prodtransac">Next</a>
+ </div>
+ <hr/> 
+ <div>
+ <img src="https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/UR8AAOSw9NdXqFyw/$_35.JPG" class="img-medium" align="left"> 
+ </div>
+ <br>
+ <div align = "right">
+ <h3>Differnt Fruits In Our shop</h3>
+ 
+</div>
+</div>
+</body>
+</html>
     
 return prodTemplate;
 `;
