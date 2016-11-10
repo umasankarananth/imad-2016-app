@@ -151,11 +151,12 @@ app.get('/product-entry', function(req,res){
               res.status(404).send('fruit not found');
           }else{
               
-              for(var i= 0; i <= result.rows.length; i++)
+             // for(var i= 0; i <= result.rows.length; i++)
+             var x;
+              var fruitData =result.rows;
+              for(x in fruitData)
               {
-              fruitData =result.rows[i];
-              //res.send(JSON.stringify(fruitData));
-              res.send(create(fruitData));
+              res.send(create(fruitData[x]));
               }
           }
       
