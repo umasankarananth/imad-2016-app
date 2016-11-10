@@ -95,19 +95,20 @@ var prodTemplate =`
                  <div>
                  <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ6ea2NnLWN_eAer9-uW_nYpQZ_5jMxXqYh2aEsw0uBuc9WdSrv" class="img-medium" align = "left">
                  </div>
-                 Enter the fruit name :
+                 <div>
+                 <h3>Enter the fruit name :
                  <input type = "text" id="fname" placeholder = "Enter fruitname"> ${fname} 
                  Enter the quantity :
                  <input type = "text" id="quantity" placeholder = "Enter Quantity">  ${quantity} 
                  <input type = "submit" id="calculate-btn" value = "Evaluate"> <br/>
                  The Amount you have to pay :
-                 <input type = "text" id="amount" placeholder = "0">
+                 <input type = "text" id="amount" placeholder = "0"></h3>
                  </div>
            </div>
       </div> 
       </body>
 </html>
-`
+`;
 return prodTemplate;
 
 }
