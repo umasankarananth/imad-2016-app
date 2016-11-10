@@ -154,9 +154,9 @@ app.get('/welcomeform', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'welcomeform.html'));
 });
 
-app.get('/:product-entry', function(req,res){
-   // var prod = req.params.prod;
-        res.send(create(product-entry));  
+app.get('/:product-entry/:prod', function(req,res){
+    var prod = req.params.prod;
+        res.send(create(prod));  
 });
 
 
