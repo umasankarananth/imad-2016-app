@@ -107,8 +107,7 @@ app.get('/', function (req, res) {
 
 var pool = new Pool(config);
 app.get('/orange', function (req, res) {
-  //res.sendFile(path.join(__dirname, 'ui', 'orange.html'));
-  //Make a select request
+    //Make a select request
   //return the response with the results
    // pool.query("SELECT * FROM fruitprice where fruitName ='" +req.params.fname +"'", function(err,result){
       pool.query('SELECT * FROM fruitprice',function(err,result){
@@ -140,21 +139,6 @@ app.get('/submit-name', function(req,res){
 });
 
 
-app.get('/fruitentry',function(req,res)
-{
-  //Make a select request
-  //return the response with the results
-    pool.query('SELECT * FROM fruitentry', function(err,result){
-      if(err){
-          res.status(500).send(err.toString());
-      }else{
-          res.send(JSON.stringify(result.rows));
-      }
-  });
-  
-});
-
-
 app.get('/:prod', function(req,res){
 //  Make a select request
  // return the response with the results
@@ -181,10 +165,6 @@ app.get('/:prod', function(req,res){
 app.get('/welcomeform', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'welcomeform.html'));
 });
-
-//app.get('/product-entry', function(req,res){
-// res.send(create(prod));
-//});
 
 
 //app.get('/:prodName', function(req,res){
