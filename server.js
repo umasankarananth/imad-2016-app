@@ -49,7 +49,7 @@ var prodTemplate =`
      <img src="https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/UR8AAOSw9NdXqFyw/$_35.JPG" class="img-medium" align="left"> 
      </div>
      <br>
-     <div align = "right">
+     <div>
      <h3>Differnt Fruits In Our shop</h3>
       <table>
       <tr>
