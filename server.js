@@ -71,49 +71,7 @@ var prodTemplate =`
 </div>
 </body>
 </html>
- 
- //return prodTemplate;
-//}
-
-  <html>
-     <head>
-       <title>CHESNUT FRUITS> </title>
-        <meta name ="viewport" content = "width-device-width, initial-scale-1"/>
-       <link href="/ui/style.css" rel="stylesheet" />
-  </head>  
-     <body>
-         <div class = "container">
-             <div class = "center">
-               <H2>TRANSACTION FORM</H2>
-                 <div align="left">
-                 <a href= "/">Home</a>
-                 </div>
-                 <div align = "right">
-                 <a href="/product-entry" align="right">Previous</a>
-                 <a href = "/prodsummary" align = "right">Next</a>
-                 </div>
-                 <hr/> 
-                 <div>
-                 <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ6ea2NnLWN_eAer9-uW_nYpQZ_5jMxXqYh2aEsw0uBuc9WdSrv" class="img-medium" align = "left">
-                 </div>
-                 <div align = "left">
-                 <h3>Enter the fruit name :
-                 <input type = "text" id="fname" placeholder = "Enter fruitname" size = "30"><br/>
-                  Enter the quantity :
-                 <input type = "text" id="quantity" placeholder = "Enter Quantity" size = "30"><br>
-                 <br/>
-                 <input type = "submit" id="calculate-btn" value = "Evaluate" size = 30> <br/>
-                 <br/>
-                  Total Amount :
-                 <input type = "text" id="amount" placeholder = "0" size="40"></h3>
-                 ${fname}
-                 ${quantity}
-                 </div>
-           </div>
-      </div> 
-      </body>
-</html>
-`;
+ `;
 return prodTemplate;
 }
 function createTemplate(data){
@@ -157,6 +115,12 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+app.get('/:prodName', function(req,res){
+    var prodName = req.params.prodName;
+        res.send(create(products[prodName]));  
+});
+
 
 var names = [];
 app.get('/submit-name', function(req,res){
@@ -209,10 +173,6 @@ app.get('/welcomeform', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'welcomeform.html'));
 });
 
-app.get('/:prodName', function(req,res){
-    var prodName = req.params.prodName;
-        res.send(create(products[prodName]));  
-});
 
 
 //app.get('/product-entry', function(req,res){
