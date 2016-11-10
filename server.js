@@ -145,7 +145,7 @@ app.get('/product-entry', function(req,res){
           if(result.rows.length=== 0){
               res.status(404).send('fruit not found');
           }else{
-              
+              console.log(result.rows.length);
              var i; 
              var fruitData;
              //for(i=0; i < result.rows.length; i++)
