@@ -20,7 +20,8 @@ var products = {
      fruitName :  'apple',
      rate : 30
      },
-  'trans':{     
+  'trans':{    
+      fruit
   }
 };
 function create(dt){
@@ -67,8 +68,46 @@ var prodTemplate =`
 </div>
 </body>
 </html>
- `;   
+ `,
+ `
+ <html>
+    <head>
+       <title>CHESNUT FRUITS> </title>
+         <meta name ="viewport" content = "width-device-width, initial-scale-1"/>
+         <link href="/ui/style.css" rel="stylesheet" />
+    </head>  
+ 
+     <body>
+         <div class = "container">
+             <div class = "center">
+                 <H2>TRANSACTION FORM</H2>
+                 <div align="left">
+                 <a href= "/">Home</a>
+                 </div>
+                 <div align = "right">
+                 <a href="/product-entry" align="right">Previous</a>
+                 <a href = "/prodsummary" align = "right">Next</a>
+                 </div>
+                 <hr/> 
+                 <div>
+                 <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ6ea2NnLWN_eAer9-uW_nYpQZ_5jMxXqYh2aEsw0uBuc9WdSrv" class="img-medium" align = "left">
+                 </div>
+                 <div>
+                 Enter the fruit name :
+                 <input type = "text" id="fname" placeholder = "Enter fruitname"><br/>
+                 Enter the quantity :
+                 <input type = "text" id="quantity" placeholder = "Enter Quantity"><br>
+                 <input type = "submit" id="calculate-btn" value = "Evaluate"> <br/>
+                 The Amount you have to pay :
+                 <input type = "text" id="amount" placeholder = "0">
+                 </div>
+           </div>
+      </div> 
+      </body>
+</html>
+ `;
 return prodTemplate;
+
 }
 
 function createTemplate(data){
