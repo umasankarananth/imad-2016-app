@@ -118,7 +118,7 @@ app.get('/submit-name', function(req,res){
     res.send(JSON.stringify(names));
 });
 
-var pool = new Pool(config);
+
 app.get('/fruitentry',function(req,res)
 {
   //Make a select request
@@ -132,6 +132,7 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
+var pool = new Pool(config);
 app.get('/fruittrans',function(req,res)
 {
   //Make a select request
