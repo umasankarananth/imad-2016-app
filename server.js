@@ -16,8 +16,8 @@ app.use(morgan('combined'));
 
 function create(dt){
     var fruitId = dt.fruitId;
-    fruitName :   dt.fruitName;
-    rate : dt.rate;
+    var fruitName :   dt.fruitName;
+    var rate : dt.rate;
 
 var prodTemplate =` 
 <html>
@@ -29,31 +29,31 @@ var prodTemplate =`
  
  <body>
  <div class = "container">
- <div class = "center">
- <H2> ENTRY FORM</H2>
- </div>
- <a href="/">Home</a>
- <div align="right">
- <a href = "/welcomeform">Previous</a>         
- <a href= "/prodtransac">Next</a>
- </div>
- <hr/> 
- <div>
- <img src="https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/UR8AAOSw9NdXqFyw/$_35.JPG" class="img-medium" align="left"> 
- </div>
- <br>
- <div align = "right">
- <h3>Differnt Fruits In Our shop</h3>
-  <h4>
-  {fruitId}
-  </h4>
- <h4>
- {fruitName}
- </h4>
- <h4>
- {rate}
- </h4>
-</div>
+     <div class = "center">
+         <H2> ENTRY FORM</H2>
+     </div>
+         <a href="/">Home</a>
+       <div align="right">
+         <a href = "/welcomeform">Previous</a>         
+         <a href= "/prodtransac">Next</a>
+       </div>
+       <hr/> 
+     <div>
+     <img src="https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/UR8AAOSw9NdXqFyw/$_35.JPG" class="img-medium" align="left"> 
+     </div>
+     <br>
+     <div align = "right">
+     <h3>Differnt Fruits In Our shop</h3>
+      <h4>
+      ${fruitId}
+      </h4>
+     <h4>
+     ${fruitName}
+     </h4>
+     <h4>
+     ${rate}
+     </h4>
+    </div>
 </div>
 </body>
 </html>
