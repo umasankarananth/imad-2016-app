@@ -71,11 +71,11 @@ var prodTemplate =`
 </div>
 </body>
 </html>
- `,
+ 
  //return prodTemplate;
 //}
 
- ` <html>
+  <html>
      <head>
        <title>CHESNUT FRUITS> </title>
         <meta name ="viewport" content = "width-device-width, initial-scale-1"/>
