@@ -57,10 +57,9 @@ var prodTemplate =`
 </div>
 </body>
 </html>
-    
+ `;   
 return prodTemplate;
-`;
-}
+};
 
 function createTemplate(data){
     var title = data.title;
@@ -155,9 +154,9 @@ app.get('/welcomeform', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'welcomeform.html'));
 });
 
-app.get('/:prod', function(req,res){
-    var prod = req.params.prod;
-        res.send(create(prod));  
+app.get('/:product-entry', function(req,res){
+   // var prod = req.params.prod;
+        res.send(create(product-entry));  
 });
 
 
