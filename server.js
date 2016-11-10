@@ -22,7 +22,7 @@ var products = {
      },
   'trans':{    
       fname : 'apple',
-      quantity : 5,
+      quantity : 5
         }
 };
 function create(dt){
@@ -98,6 +98,8 @@ var prodTemplate =`
                  <div>
                  <h3>Enter the fruit name :
                  <input type = "text" id="fname" placeholder = "Enter fruitname"> ${fname} 
+                 </div>
+                 
                  Enter the quantity :
                  <input type = "text" id="quantity" placeholder = "Enter Quantity">  ${quantity} 
                  <input type = "submit" id="calculate-btn" value = "Evaluate"> <br/>
