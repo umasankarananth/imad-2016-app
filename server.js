@@ -53,8 +53,8 @@ var prodTemplate =`
      <div>
      <h3>Differnt Fruits In Our shop</h3>
      <h3>FRUITSID    FRUITNAME    RATE </h3>
-     ${fruitId} </t>
-      ${fruitName}</t>
+     ${fruitId} </t></t>
+      ${fruitName}</t></t>
      ${rate}
     </div> 
     </div>
