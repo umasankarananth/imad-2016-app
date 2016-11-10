@@ -153,11 +153,16 @@ app.get('/product-entry', function(req,res){
               
              // for(var i= 0; i <= result.rows.length; i++)
              var x;
-              var fruitData =result.rows[0];
+             var i; 
+             var fruitData;
+             for(i=0; i < result.rows.length; i++)
+             {
+               fruitData =result.rows[i];
               for(x in fruitData)
               {
               res.send(create(fruitData[x]));
               }
+             }
           }
       
       }
