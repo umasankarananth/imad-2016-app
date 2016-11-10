@@ -146,18 +146,15 @@ app.get('/product-entry', function(req,res){
               res.status(404).send('fruit not found');
           }else{
               
-             // for(var i= 0; i <= result.rows.length; i++)
-            // var x;
              var i; 
              var fruitData;
-             for(i=0; i < result.rows.length; i++)
-             {
-               fruitData[i] =result.rows[i];
-              //for(x in fruitData)
-              //{
-              res.send(create(fruitData[i]));
+             //for(i=0; i < result.rows.length; i++)
+             //{
+               fruitData =result.rows;
+              
+              res.send(create(fruitData));
               //}
-             }
+             //}
           }
       
       }
