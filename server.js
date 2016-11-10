@@ -153,7 +153,7 @@ app.get('/product-entry', function(req,res){
               
              // for(var i=0; i < result.rows.length; i++)
               //{
-             var fruitData =result.rows;
+             var fruitData =result.rows[0];
               //res.send(JSON.stringify(fruitData));
               res.send(create(fruitData));
             //  }
