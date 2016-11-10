@@ -132,6 +132,20 @@ app.get('/fruitentry',function(req,res)
   });
   
 });
+app.get('/fruittransac',function(req,res)
+{
+  //Make a select request
+  //return the response with the results
+    pool.query('SELECT * FROM fruittransac', function(err,result){
+      if(err){
+          res.status(500).send(err.toString());
+      }else{
+          res.send(JSON.stringify(result.rows));
+      }
+  });
+  
+});
+
 
 app.get('/:prod', function(req,res){
 //  Make a select request
