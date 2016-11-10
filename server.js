@@ -23,13 +23,13 @@ app.use(morgan('combined'));
   
 
 function create(dt){
-    var fruitId = dt.fruitId;
-    var fruitName =  dt.fruitName;
-    var rate = dt.rate;
    
-var prodTemplate =` 
+    var fruitName =  dt.fruitName;
+    var ratePerKg = dt.ratePerKg;
+   
+var fruitTemplate =` 
 <html>
-<head>
+    <head>
   <title>CHESNUT FRUITS> </title>
          <meta name ="viewport" content = "width-device-width, initial-scale-1"/>
          <link href="/ui/style.css" rel="stylesheet" />
@@ -37,32 +37,26 @@ var prodTemplate =`
  
  <body>
  <div class = "container">
-     <div class = "center">
-         <H2> ENTRY FORM</H2>
-     
-         <a href="/">Home</a>
-       <div align="right">
-         <a href = "/welcomeform">Previous</a>         
-         <a href= "/prodtransac">Next</a>
-       </div>
-       <hr/> 
-     <div>
-     <img src="https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/UR8AAOSw9NdXqFyw/$_35.JPG" class="img-medium" align="left"> 
-     </div>
-     <br>
-     <div>
-     <h3>Differnt Fruits In Our shop</h3>
-     <h3>FRUITSID    FRUITNAME    RATE </h3>
-     ${fruitId} 
-      ${fruitName}
-     ${rate}
-    </div> 
-    </div>
+ <div class = "center">
+  <H1> ORANGE </H1>
+  <div align="left">
+  <a href="/">Home</a>
+  </div>
+ <div align="right">
+ <a href = "/welcomeform">Previous</a>         
+ </div>
+ <hr/> 
+ <div>
+ <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTtFPCG_24fGo4w-pT0B0UAo6uDyTmmQTL7jIJOevrzb2RIcxePYw" class="img-medium"> 
+ </div>
+ <br>
+ </div>
 </div>
 </body>
+
 </html>
  `;
-return prodTemplate;
+return fruitTemplate;
 }
 function createTemplate(data){
     var title = data.title;
