@@ -44,7 +44,9 @@ var prodTemplate =`
  <br>
  <div align = "right">
  <h3>Differnt Fruits In Our shop</h3>
- 
+  <h4>fruitId</h4>
+ <h4>fruitName</h4>
+ <h4>rate</h4>
 </div>
 </div>
 </body>
