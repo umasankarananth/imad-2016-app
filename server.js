@@ -51,7 +51,7 @@ var prodTemplate =`
      <br>
      <div>
      <h3>Differnt Fruits In Our shop</h3>
-      <table align = "center">
+      <table align = "center" border = "1">
       <tr>
          <th>FRUITID </th> <th> FRUITNAME</th> <th>RATE</th>
       </tr>
