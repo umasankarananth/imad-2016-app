@@ -180,8 +180,25 @@ app.get('/welcomeform', function(req,res){
 //});
 
 app.get('/prodtransac', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'prodtransac.html'));
+    pool.query('SELECT rate,fruitName from fruitentry,fruittrans WHERE fruitentry.fruitName = fruittrans.fruitName',function(err,result){
+      if(err){
+          res.status(500).send(err.toString());
+      }else{
+          if(result.rows.length=== 0){
+              res.status(404).send('fruit not found');
+          }else{
+               
+               var fruitData =result.rows;
+               res.send(create(fruitData));
+                } 
+     
+          }
+
+  });
+  
 });
+   // res.sendFile(path.join(__dirname, 'ui', 'prodtransac.html'));
+
 
 //app.get('/:prodName', function(req,res){
   //  var prodName = req.params.prodName;
