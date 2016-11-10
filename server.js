@@ -110,7 +110,7 @@ app.get('/:fname', function (req, res) {
   //res.sendFile(path.join(__dirname, 'ui', 'orange.html'));
   //Make a select request
   //return the response with the results
-    pool.query("SELECT * FROM fruitprice where fruitName =  ='" +req.params.fname+"'", function(err,result){
+    pool.query("SELECT * FROM fruitprice where fruitName ='" +req.params.fname+"'", function(err,result){
        if(err){
           res.status(500).send(err.toString());
       }else{
