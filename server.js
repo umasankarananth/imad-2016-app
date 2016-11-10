@@ -180,7 +180,7 @@ app.get('/welcomeform', function(req,res){
 //});
 
 app.get('/prodtransac', function(req,res){
-    pool.query('SELECT * from fruitentry,fruittrans WHERE fruitentry.fruitName == fruittrans.fruitName',function(err,result){
+    pool.query('SELECT * from fruitentry,fruittrans WHERE fruitentry.fruitName === fruittrans.fruitName',function(err,result){
       if(err){
           res.status(500).send(err.toString());
       }else{
