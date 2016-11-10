@@ -118,8 +118,8 @@ app.get('/:fname', function (req, res) {
               res.status(404).send('fruit not found');
           }else{
                
-               var fruitData =result.rows[0];
-               res.send(create(fruitData));
+               var frutData =result.rows[0];
+               res.send(create(frutData));
                 } 
      
           }
