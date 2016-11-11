@@ -59,9 +59,9 @@ var fruitTemplate =`
   </div>
  <br>
  <div class = "bold">
-  Fruit Name : ${fruitName}
+  Fruit name : ${fruitName}
   <br/>
-  Rate Per kg : ${ratePerKg}
+  Rate Per kg : Rs ${ratePerKg}
   </div>
  </div>
 </div>
