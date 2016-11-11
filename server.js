@@ -64,43 +64,6 @@ var fruitTemplate =`
  `;
 return fruitTemplate;
 }
-function createTemplate(data){
-    var title = data.title;
-    var date = data.date;
-    var heading = data.heading;
-    var content = data.content;
-
-var htmlTemplate = `
-<html>
-    <head>
-        <title>
-            ${title}
-        </title>
-            <meta name ="viewport" content = "width-device-width, initial-scale-1"/>
-            <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class = "container">
-                <div>
-                    <a href= "/">Home</a>
-                </div>
-                <hr>
-                <h3>
-                    ${heading}
-                </h3>
-                <div>
-                    ${date.toDateString()}
-                </div>
-                <div>
-                   ${content}
-                </div>
-        </div>        
-    </body>
-</html>
-`;
-return htmlTemplate;
-}
-
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -190,29 +153,6 @@ app.get('/submit-name', function(req,res){
    //var name= req.query.name;
     names.push(name);
     res.send(JSON.stringify(names));
-});
-
-
-app.get('/:prod', function(req,res){
-//  Make a select request
- // return the response with the results
-   // pool.query("SELECT * FROM fruitentry WHERE fruitgroup ='" +req.params.prod+"'", function(err,result){
-       pool.query('SELECT * FROM fruitentry', function(err,result){
-      if(err){
-          res.status(500).send(err.toString());
-      }else{
-          if(result.rows.length=== 0){
-              res.status(404).send('fruit not found');
-          }else{
-               
-               var fruitData =result.rows[1];
-               res.send(create(fruitData));
-                } 
-     
-          }
-
-  });
-  
 });
 
 
