@@ -26,6 +26,7 @@ function create(dt){
     var fruitName =  dt.fruitName;
     var ratePerKg = dt.ratePerKg;
      var fruheading = dt.fruheading;
+     var fruimage= dt.fruimage;
 var fruitTemplate =` 
 <html>
     <head>
@@ -46,7 +47,7 @@ var fruitTemplate =`
  </div>
  <hr/> 
  <div>
- <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTtFPCG_24fGo4w-pT0B0UAo6uDyTmmQTL7jIJOevrzb2RIcxePYw" class="img-medium"> 
+ <img src="${fruimage}" class="img-medium"> 
  
  </div>
  <br>
