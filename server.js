@@ -61,7 +61,7 @@ var fruitTemplate =`
  <div class = "bold">
   Fruit name : ${fruitName}
   <br/>
-  Rate Per kg : Rs ${ratePerKg}
+  Rate per kg : Rs ${ratePerKg}
   </div>
  </div>
 </div>
