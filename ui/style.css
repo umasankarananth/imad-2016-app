@@ -37,5 +37,5 @@ body {
     a:link  {color:white; background-color:transparent; text-decoration:none}
     a:visited {color:cyan; background-color:transparent; text-decoration:none}
     a:hover   {color:yellow; background-color:transparent; text-decoration:underline}
-   a:active  {color:blue; background-color:transparent; text-decoration:underline}
+   a:active  {color:blue; background-color:white; text-decoration:underline}
 
