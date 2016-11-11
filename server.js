@@ -119,7 +119,7 @@ app.get('/orange', function (req, res) {
               res.status(404).send('fruit not found');
           }else{
                
-               var frutData =result.rows[3];
+               var frutData =result.rows[2];
                res.send(create(frutData));
                 } 
      
@@ -142,7 +142,7 @@ app.get('/apple', function (req, res) {
               res.status(404).send('fruit not found');
           }else{
                
-              var frutData =result.rows[1];
+              var frutData =result.rows[3];
                res.send(create(frutData));
                 } 
       }
