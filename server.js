@@ -47,7 +47,7 @@ var fruitTemplate =`
 <a href="/grapes">Grapes</a>
 <a href="/mango">Mango</a> 
 </div>
-<div>
+<div align = "right">
 <a href="/fruitmenu">Main menu</a>
 </div>
 <div>
