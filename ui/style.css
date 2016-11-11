@@ -33,3 +33,7 @@ body {
     height:150px;
     width:150px;
 }
+
+    a:link  {color:green; background-color:transparent; text-decoration:none}
+
+
