@@ -58,7 +58,7 @@ var fruitTemplate =`
  <img src="${fruimage}" class="img-medium"> 
   </div>
  <br>
- <div class = "bold">
+ <div class = "text-big">
   Fruit name : ${fruitName}
   <br/>
   Rate per kg : Rs ${ratePerKg}
