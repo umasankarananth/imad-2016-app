@@ -119,7 +119,7 @@ app.get('/orange', function (req, res) {
               res.status(404).send('fruit not found');
           }else{
                
-               var frutData =result.rows[0];
+               var frutData =result.rows[3];
                res.send(create(frutData));
                 } 
      
