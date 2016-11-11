@@ -47,6 +47,7 @@ var fruitTemplate =`
 <a href="/grapes">Grapes</a>
 <a href="/mango">Mango</a> 
 </div>
+<div>
 <img src="http://www.w3schools.com/html/smiley.gif" alt="Smiley face" style="float:right;width:50px;height:50px;"> 
 </div>
 <hr/> 
