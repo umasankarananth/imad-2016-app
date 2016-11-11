@@ -165,6 +165,11 @@ app.get('/welcomeform', function(req,res){
   //  var prodName = req.params.prodName;
     //    res.send(create(products[prodName]));  
 //});
+app.get('/product-entry', function(req,res){
+    res.sendFile(path.join(__dirname, 'ui', 'product-entry.html'));
+});
+
+
 
 app.get('/prodsummary', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'prodsummary.html'));
