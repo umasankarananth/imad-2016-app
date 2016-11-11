@@ -39,17 +39,7 @@ var fruitTemplate =`
  <div class = "container">
  <div class = "center">
  <H1> ${fruheading} </H1>
-// <div align="left">
- //<img src="http://www.w3schools.com/html/smiley.gif" alt="Smiley face" style="float:left;width:50px;height:50px;">
-//<a href= "/">Home</a>
-//<a href="/orange">Orange</a>
-//<a href="/apple">Apple</a>
-//<a href="/grapes">Grapes</a>
-//<a href="/mango">Mango</a> 
-//</div>
-//<div>
-//<img src="http://www.w3schools.com/html/smiley.gif" alt="Smiley face" style="float:right;width:50px;height:50px;"> 
-//</div>
+
 <hr/> 
  <div>
  <img src="${fruimage}" class="img-medium"> 
