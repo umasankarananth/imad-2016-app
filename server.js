@@ -47,14 +47,12 @@ var fruitTemplate =`
 <a href="/grapes">Grapes</a>
 <a href="/mango">Mango</a> 
 </div>
-
 <img src="http://www.w3schools.com/html/smiley.gif" alt="Smiley face" style="float:right;width:50px;height:50px;"> 
 </div>
-hr/> 
+<hr/> 
  <div>
  <img src="${fruimage}" class="img-medium"> 
- 
- </div>
+  </div>
  <br>
  <div class = "bold">
   Fruit Name : ${fruitName}
@@ -64,7 +62,6 @@ hr/>
  </div>
 </div>
 </body>
-
 </html>
  `;
 return fruitTemplate;
