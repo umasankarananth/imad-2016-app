@@ -84,6 +84,10 @@ app.get('/hash/:input',function(req,res)
   res.send(hashedString);
 });
 
+app.get('create-user',function(req,res){
+    
+});
+
 var pool = new Pool(config);
 app.get('/orange', function (req, res) {
     //Make a select request
