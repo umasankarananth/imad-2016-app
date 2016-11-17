@@ -27,6 +27,7 @@ function create(dt){
     var ratePerKg = dt.ratePerKg;
      var fruheading = dt.fruheading;
      var fruimage= dt.fruimage;
+     var fruitinfo = dt.fruitinfo;
 var fruitTemplate =` 
 <html>
     <head>
@@ -63,11 +64,9 @@ var fruitTemplate =`
   <br/>
   Rate per kg : Rs ${ratePerKg}
   </div>
+  <br/>
   <div align="justify">
-       "An apple a day keeps the doctor away..."
-         Apple (Malus pumila) is a delicious fruit, rich in Vitamins C, B6, B2, K and elements like Potassium, Phosphorus and Manganese. With 52 kcal energy per 100g, it is a good source of sugar and dietary fiber.
-       It originated in Central Asia and is now cultivated worldwide for thousands of years.
-        Over 7500 varieties are grown for eating raw, cooking and producing Cider. China accounts for half of the world's apple production
+      ${fruitinfo}
  </div>
 </div>
 </body>
