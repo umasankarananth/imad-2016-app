@@ -14,13 +14,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-//var prod = {
-   // fruitId : 1,
-    // fruitName :  'apple',
-    // rate : 30
-     //};
-  
-
 function create(dt){
    
     var fruitName =  dt.fruitName;
@@ -60,7 +53,7 @@ var fruitTemplate =`
   </div>
  <br>
  <div class = "text-big">
-  Fruit name : ${fruitName}
+  Fruit name : ${fruheading}
   <br/>
   Rate per kg : Rs ${ratePerKg}
   </div>
