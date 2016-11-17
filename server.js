@@ -116,7 +116,7 @@ app.get('/login',function(req,res){
               var dbString = result.rows[0].password;
               var salt = dbString.split('$')[2];
               var hashedPassword = hash(password,salt);//creating a hash based on thepassword submitted and the original salt
-              if(hashedPassword=== dbString){
+              if(hashedPassword === dbString){
                   res.send('credientials are correct');
               }
        
