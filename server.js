@@ -113,13 +113,19 @@ app.get('/login',function(req,res){
           }
           else{
               //match the password
-              var dbString = result.rows[0].password
-          }
-          
-      }else{
-               res.send('User Successfully Created' + username);
+              var dbString = result.rows[0].password;
+              var salt = dbString.split('$')[2];
+              var hashedPassword = hash(password,salt);//creating a hash based on thepassword submitted and the original salt
+              if(hashedPassword=== dbString){
+                  res.send('credientials are correct');
+              }
+       
+                  else{
+               res.send(403).send('user/password not is invalid');
                 } 
-         });
+          }
+      }      
+  });
 });
 
 var pool = new Pool(config);
