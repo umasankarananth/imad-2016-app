@@ -63,7 +63,7 @@ var fruitTemplate =`
   <br/>
   Rate per kg : Rs ${ratePerKg}
   </div>
-  <div>
+  <div align="justify">
        "An apple a day keeps the doctor away..."
          Apple (Malus pumila) is a delicious fruit, rich in Vitamins C, B6, B2, K and elements like Potassium, Phosphorus and Manganese. With 52 kcal energy per 100g, it is a good source of sugar and dietary fiber.
        It originated in Central Asia and is now cultivated worldwide for thousands of years.
