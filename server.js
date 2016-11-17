@@ -103,6 +103,25 @@ app.post('/create-user',function(req,res){
          });
 });
 
+app.get('/login',function(req,res){
+ username = req.body.username;
+   var password = req.body.password;
+    pool.query('SELECT * FROM "user" WHERE username = $1',[username],function(err,result){
+      if(err){
+          if(result.rows.length=== 0){
+              res.send(403).send('user/password not is invalid');
+          }
+          else{
+              //match the password
+              var dbString = result.rows[0].password
+          }
+          
+      }else{
+               res.send('User Successfully Created' + username);
+                } 
+         });
+});
+
 var pool = new Pool(config);
 app.get('/orange', function (req, res) {
     //Make a select request
