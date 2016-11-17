@@ -73,7 +73,7 @@ app.get('/', function (req, res) {
 });
 
 var pool = new Pool(config);
-app.get('/fruits/:fruitName', function (req, res) {
+app.get('/:fruitName', function (req, res) {
     //Make a select request
   //return the response with the results
     pool.query("SELECT * FROM fruitprice where fruitName ='" +req.params.fruitName +"'", function(err,result){
