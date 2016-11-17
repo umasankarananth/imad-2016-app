@@ -104,12 +104,12 @@ app.post('/create-user',function(req,res){
 });
 
 app.post('/login',function(req,res){
- username = req.body.username;
+var username = req.body.username;
    var password = req.body.password;
     pool.query('SELECT * FROM "user" WHERE username = $1',[username],function(err,result){
       if(err){
           if(result.rows.length=== 0){
-              res.send(403).send('user/password not is invalid');
+              res.send(403).send('user/password is invalid');
           }
           else{
               //match the password
@@ -121,7 +121,7 @@ app.post('/login',function(req,res){
               }
        
                   else{
-               res.send(403).send('user/password not is invalid');
+               res.send(403).send('user/password is invalid');
                 } 
           }
       }      
