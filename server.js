@@ -4,6 +4,7 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+var session =  require('express-session');
 
 var config = {
       user: 'umasankarananth',
@@ -16,6 +17,10 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret: 'someRandomSecretValue',
+    cookies: {maxAge:1000 * 60 *60*24*30}
+}));
 
 function create(dt){
     var fruitName =  dt.fruitName;
