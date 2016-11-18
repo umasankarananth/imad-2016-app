@@ -124,6 +124,12 @@ app.post('/login',function(req,res){
               var salt = dbString.split('$')[2];
               var hashedPassword = hash(password,salt);//creating a hash based on thepassword submitted and the original salt
               if(hashedPassword === dbString){
+                  
+                  //set the session
+                  req.session.auth = {userId: result.rows[0].id};
+                  //set cookie with a session id
+                  //
+                  //
                   res.send('credientials are correct');
               }
        
