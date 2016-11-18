@@ -1,7 +1,7 @@
 
   //SUBMIT username password to Login
   
-  var sub = document.getElementById('sub_btn');
+  var submit = document.getElementById('submit_btn');
   
   sub.onclick = function(){ 
            //Create a request Object
@@ -40,7 +40,7 @@
                       var password = document.getElementById('password').value;
                       console.log(username);
                       console.log(password);
-                     request.open('POST' ,'http://umasankarananth.imad.hasura-app.io/login, true);
+                     request.open('POST' ,'http://umasankarananth.imad.hasura-app.io/login', true);
                      request.send(JSON.stringify({username:username, password: password}));
     };
      
