@@ -19,7 +19,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(session({
     secret: 'someRandomSecretValue',
-    cookie: {maxAge: 1000 * 60 *60 *24 * 30}
+    cookie: { maxAge: 1000 * 60 *60 *24 * 30}
 }));
 
 function create(dt){
@@ -135,7 +135,7 @@ app.post('/login',function(req,res){
               }
        
                   else{
-               res.send(403).send('user/password is invalid');
+               res.send(403).send('username/password is invalid');
                 } 
           }
       }      
