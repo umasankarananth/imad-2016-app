@@ -150,6 +150,11 @@ app.get('/check-login', function(req,res){
     }
 });
 
+app.get('/logout', function(req,res){
+   delete req.session.auth;
+   res.send('logged out');
+});
+
 var pool = new Pool(config);
 app.get('/orange', function (req, res) {
     //Make a select request
