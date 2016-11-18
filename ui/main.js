@@ -11,14 +11,13 @@
                  if(request.readyState === XMLHttpRequest.DONE){
                      //Take some action
                      if(request.status === 200){
-                         console.log('User Logged in');
                          alert('Logged in Successfully');
                      }
                      else if(request.status=== 403){
                          alert('Username/Password is Incorrect');
                      }
                      else if(request.status===500){
-                         alert('Something went wrong in the server');
+                         alert('Something went wrong on the server');
                      }
                     
                 }
