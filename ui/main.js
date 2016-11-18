@@ -36,8 +36,8 @@
                  //Not done yet
             };
           //Make request to server and send the name
-                     var nameInput = document.getElementById('name');
-                     var name = nameInput.value;
+                     var username = document.getElementById('username').value;
+                      var password = document.getElementById('password').value;
                      request.open('POST' ,'http://umasankarananth.imad.hasura-app.io/submit-name?name' + name, true);
                      request.send(JSON.stringify({username:username, password: password}));
     };
