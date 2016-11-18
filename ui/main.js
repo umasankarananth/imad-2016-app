@@ -1,7 +1,7 @@
 
   //SUBMIT username password to Login
   
-  var sub = document.getElementById('submit_btn');
+  var sub = document.getElementById('sub_btn');
   
   sub.onclick = function(){ 
            //Create a request Object
