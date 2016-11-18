@@ -11,6 +11,7 @@
                  if(request.readyState === XMLHttpRequest.DONE){
                      //Take some action
                      if(request.status === 200){
+                         console.log('user logged in');
                          alert('Logged in Successfully');
                      }
                      else if(request.status=== 403){
@@ -28,7 +29,7 @@
                       var password = document.getElementById('password').value;
                       console.log(username);
                       console.log(password);
-                     request.open('POST' ,'http://umasankarananth.imad.hasura-app.io/login', true);
+                     request.open('POST','http://umasankarananth.imad.hasura-app.io/login', true);
                      request.setRequestHeader('Content-Type','application/json');
                      request.send(JSON.stringify({username:username, password: password}));
                           
