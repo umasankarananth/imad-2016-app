@@ -128,8 +128,9 @@ app.post('/login',function(req,res){
                   //set the session
                   req.session.auth = {userId: result.rows[0].id};
                   //set cookie with a session id
-                  //
-                  //
+                  //Internally on the sever side, it maps the session id to an object
+                  //{auth: {userId}}
+                  
                   res.send('credientials are correct');
               }
        
@@ -140,6 +141,10 @@ app.post('/login',function(req,res){
       }      
   });
 });
+
+app.get('/check-login', function(req,res){
+    if(req.session)
+})
 
 var pool = new Pool(config);
 app.get('/orange', function (req, res) {
