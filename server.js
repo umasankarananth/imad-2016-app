@@ -23,7 +23,7 @@ app.use(session({
 }));
 
 function create(dt){
-    var fruitName =  dt.fruitName;
+    var fname =  dt.fruitName;
     var ratePerKg = dt.ratePerKg;
      var fruheading = dt.fruheading;
      var fruimage= dt.fruimage;
