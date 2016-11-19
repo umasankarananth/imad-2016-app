@@ -23,7 +23,7 @@ app.use(session({
 }));
 
 function create(dt){
-    var fname =  dt.fruitName;
+    var fname =  dt.fname;
     var ratePerKg = dt.ratePerKg;
      var fruheading = dt.fruheading;
      var fruimage= dt.fruimage;
@@ -39,7 +39,7 @@ var fruitTemplate =`
  <body>
  <div class = "container">
  <div class = "center">
- <H1> ${fruheading} </H1>
+ <H1> ${fname} </H1>
  <div align="left">
  <img src="http://www.w3schools.com/html/smiley.gif" alt="Smiley face" style="float:left;width:50px;height:50px;">
 <a href= "/">Home</a>
