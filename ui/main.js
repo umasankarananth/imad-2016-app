@@ -106,3 +106,5 @@ function loadLogin () {
     request.open('GET', '/check-login', true);
     request.send(null);
 }
+
+loadLogin();
