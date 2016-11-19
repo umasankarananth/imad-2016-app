@@ -39,7 +39,7 @@ var fruitTemplate =`
  <body>
  <div class = "container">
  <div class = "center">
- <H1> ${fname} </H1>
+ <H1> ${fruheading} </H1>
  <div align="left">
  <img src="http://www.w3schools.com/html/smiley.gif" alt="Smiley face" style="float:left;width:50px;height:50px;">
 <a href= "/">Home</a>
@@ -163,9 +163,9 @@ app.get('/logout', function(req,res){
 });
 
 var pool = new Pool(config);
-app.get('/articles/:fname', function (req, res) {
+app.get('/articles/:fruitName', function (req, res) {
   // SELECT * FROM fruitprce WHERE title = '\'; DELETE WHERE a = \'asdf'
-  pool.query("SELECT * FROM fruitprice WHERE fruitName = $1", [req.params.fname], function (err, result) {
+  pool.query("SELECT * FROM fruitprice WHERE fruitName = $1", [req.params.fruitName], function (err, result) {
     if (err) {
         res.status(500).send(err.toString());
     } else {
