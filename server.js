@@ -163,21 +163,6 @@ app.get('/logout', function(req,res){
 });
 
 var pool = new Pool(config);
-app.get('/articles/:fruitName', function (req, res) {
-  // SELECT * FROM fruitprce WHERE title = '\'; DELETE WHERE a = \'asdf'
-  pool.query("SELECT * FROM fruitprice WHERE fruitName = $1", [req.params.fruitName], function (err, result) {
-    if (err) {
-        res.status(500).send(err.toString());
-    } else {
-        if (result.rows.length === 0) {
-            res.status(404).send('Article not found');
-        } else {
-            var articleData = result.rows[0];
-            res.send(createTemplate(articleData));
-        }
-    }
-  });
-});
 
 app.get('/orange', function (req, res) {
     //Make a select request
