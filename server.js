@@ -43,10 +43,10 @@ var fruitTemplate =`
  <div align="left">
  <img src="http://www.w3schools.com/html/smiley.gif" alt="Smiley face" style="float:left;width:50px;height:50px;">
 <a href= "/">Home</a>
-<a href="/orange">Orange</a>
-<a href="/apple">Apple</a>
-<a href="/grapes">Grapes</a>
-<a href="/mango">Mango</a> 
+<a href="/fruits/orange">Orange</a>
+<a href="/fruits/apple">Apple</a>
+<a href="/fruits/grapes">Grapes</a>
+<a href="/fruits/mango">Mango</a> 
 </div>
 <div align = "right">
 <a href="/fruitmenu">Main menu</a>
