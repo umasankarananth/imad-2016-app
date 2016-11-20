@@ -99,6 +99,7 @@ app.get('/hash/:input',function(req,res)
   var hashedString = hash(req.params.input,'some-random-string');
   res.send(hashedString);
 });
+var pool = new Pool(config);
 
 app.post('/create-user',function(req,res){
    //username password
@@ -172,7 +173,7 @@ app.get('/logout', function(req,res){
    res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
 
-var pool = new Pool(config);
+
 app.post('/submit-comment/:articleName', function (req, res) {
    // Check if the user is logged in
     if (req.session && req.session.auth && req.session.auth.userId) {
