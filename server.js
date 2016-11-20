@@ -175,6 +175,23 @@ app.get('/logout', function(req,res){
    res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
 
+app.get('/fruits/:frname', function(req,res){
+   var frname = req.params.frname;
+   pool.query("SELECT * FROM fruitprice where fruitname = '"+ frname +"'", function(err,result){
+      if (err){
+          res.status(500).send(err.toString());
+      }else{
+          if(result.rows.length=== 0){
+              res.status(404).send('fruit not found');
+          }else{
+               
+               var frutData =result.rows[0];
+               res.send(create(frutData));
+                } 
+     
+          }
+   });
+});
 app.get('/orange', function (req, res) {
     //Make a select request
   //return the response with the results
