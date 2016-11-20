@@ -18,9 +18,7 @@ var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(session({
-    //resave : false,
-   // saveUnitialized :true,
-    secret: 'someRandomSecretValue',
+      secret: 'someRandomSecretValue',
     cookie: { maxAge: 1000 * 60 *60 *24 * 30}
 }));
 
@@ -193,56 +191,6 @@ app.get('/fruits/:frname', function(req,res){
    });
 });
 
-app.get('/apple', function (req, res) {
-      pool.query('SELECT * FROM fruitprice',function(err,result){
-       if(err){
-          res.status(500).send(err.toString());
-      }else{
-          if(result.rows.length=== 0){
-              res.status(404).send('fruit not found');
-          }else{
-               
-              var frutData =result.rows[1];
-               res.send(create(frutData));
-                } 
-      }
-      });
-  
-});
-app.get('/grapes', function (req, res) {
-    pool.query('SELECT * FROM fruitprice',function(err,result){
-       if(err){
-          res.status(500).send(err.toString());
-      }else{
-          if(result.rows.length=== 0){
-              res.status(404).send('fruit not found');
-          }else{
-               
-              var frutData =result.rows[2];
-               res.send(create(frutData));
-                } 
-      }
-      });
-  
-});
-
-app.get('/mango', function (req, res) {
-    pool.query('SELECT * FROM fruitprice',function(err,result){
-       if(err){
-          res.status(500).send(err.toString());
-      }else{
-          if(result.rows.length=== 0){
-              res.status(404).send('fruit not found');
-          }else{
-               
-              var frutData =result.rows[3];
-               res.send(create(frutData));
-                } 
-      }
-      });
-  
-});
-  
 
 app.get('/welcomeform', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'welcomeform.html'));
@@ -251,10 +199,6 @@ app.get('/welcomeform', function(req,res){
 app.get('/fruitmenu', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'fruitmenu.html'));
 });
-//app.get('/:prodName', function(req,res){
-  //  var prodName = req.params.prodName;
-    //    res.send(create(products[prodName]));  
-//});
 
 app.get('/feedback', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'feedback.html'));
