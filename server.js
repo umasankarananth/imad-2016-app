@@ -99,8 +99,8 @@ app.get('/hash/:input',function(req,res)
   var hashedString = hash(req.params.input,'some-random-string');
   res.send(hashedString);
 });
-var pool = new Pool(config);
 
+var pool = new Pool(config);
 app.post('/create-user',function(req,res){
    //username password
    //username : 'umasankar' password : 'ananth'
