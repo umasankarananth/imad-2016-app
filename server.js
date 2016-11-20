@@ -18,8 +18,8 @@ var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(session({
-    resave : false,
-    saveUnitialized :true,
+    //resave : false,
+   // saveUnitialized :true,
     secret: 'someRandomSecretValue',
     cookie: { maxAge: 1000 * 60 *60 *24 * 30}
 }));
@@ -191,28 +191,6 @@ app.get('/fruits/:frname', function(req,res){
      
           }
    });
-});
-app.get('/orange', function (req, res) {
-    //Make a select request
-  //return the response with the results
-   // pool.query("SELECT * FROM fruitprice where fruitName ='" +req.params.fname+"'", function(err,result){
-    // pool.query("SELECT * FROM fruitprice where fruitName = $1",[req.params.fname], function(err,result){
-      pool.query('SELECT * FROM fruitprice ',function(err,result){
-       if(err){
-          res.status(500).send(err.toString());
-      }else{
-          if(result.rows.length=== 0){
-              res.status(404).send('fruit not found');
-          }else{
-               
-               var frutData =result.rows[0];
-               res.send(create(frutData));
-                } 
-     
-          }
-
-  });
-  
 });
 
 app.get('/apple', function (req, res) {
