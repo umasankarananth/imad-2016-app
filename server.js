@@ -74,7 +74,10 @@ var fruitTemplate =`
               <div id="comments">
                 <center>Loading comments...</center>
               </div>
-            
+  <div>
+     Enter your comments
+     <textarea  id = 
+   
         
 </body>
 </html>
