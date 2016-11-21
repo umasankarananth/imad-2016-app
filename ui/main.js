@@ -129,3 +129,14 @@ var submit = document.getElementById('commentsub_btn');
           }
         };
     };
+    
+            // Make the request
+        var comm = document.getElementById('comment').value;
+        request.open('POST', '/submit-comment/' + currentArticleTitle, true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.send(JSON.stringify({comment: comm}));  
+    commentsub_btn.value = 'Submitting...';
+        
+    };
+}
+
