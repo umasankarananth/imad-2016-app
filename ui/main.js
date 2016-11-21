@@ -111,6 +111,7 @@ function loadLogin () {
 
 var currentArticleTitle = window.location.pathname.split('/')[2];
 function commentFormHtml(){
+    res.send('function calling');
 var commentobj =`
 <html>
 <body>
