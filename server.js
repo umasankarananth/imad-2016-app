@@ -68,16 +68,6 @@ var fruitTemplate =`
   <div align="justify">
       ${fruitinfo}
  </div>
-<div>
-                 
-                 <h4>Comments</h4>
-              <div id="comment_form">
-              </div>
-              <div id="comments">
-                <center>Loading comments...</center>
-              </div>
-            </div>
-</div>
 
 </body>
 </html>
