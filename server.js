@@ -69,7 +69,7 @@ var fruitTemplate =`
       ${fruitinfo}
  </div>
  <h4>Enter your comments</h4>
-  <div>     <textarea  id = "comment" rows ="5" cols="100" placeholder="Give comments here"/></textarea><br/>
+  <div>     <textarea  id = "comment" rows ="5" cols="100" placeholder="Give comments here"/></textarea><br/><br/>
      <input type="submit" value= "submit" id="commentsub_btn"/>
    </div>
         
