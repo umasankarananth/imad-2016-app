@@ -91,6 +91,7 @@ function loadLoggedInUser (username) {
 }
 
 function loadLogin () {
+    res.send('loadlogincall');
     // Check if the user is already logged in
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
@@ -111,7 +112,7 @@ function loadLogin () {
 
 var currentArticleTitle = window.location.pathname.split('/')[2];
 function commentFormHtml(){
-    res.send('function calling');
+    
 var commentobj =`
 <html>
 <body>
@@ -156,6 +157,7 @@ var commentobj =`
 }
 
 function loadLoginNext () {
+    res.send('function loadloginnext');
     // Check if the user is already logged in
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
