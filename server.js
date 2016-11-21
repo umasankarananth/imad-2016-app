@@ -76,8 +76,9 @@ var fruitTemplate =`
               </div>
   <div>
      Enter your comments
-     <textarea  id = 
-   
+     <textarea  id = "comment" placeholder="Give comments here"/></textarea>
+     <input type="submit" value= "submit" id="commentsub_btn"/>
+   </div>
         
 </body>
 </html>
