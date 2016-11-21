@@ -68,15 +68,8 @@ var fruitTemplate =`
   <div align="justify">
       ${fruitinfo}
  </div>
- <h4>Comments</h4>
-              <div id="comment_form">
-              </div>
-              <div id="comments">
-                <center>Loading comments...</center>
-              </div>
-  <div>
-     Enter your comments
-     <textarea  id = "comment" placeholder="Give comments here"/></textarea>
+ <h4>Enter your comments</h4>
+  <div>     <textarea  id = "comment" rows ="5" cols="100" placeholder="Give comments here"/></textarea><br/>
      <input type="submit" value= "submit" id="commentsub_btn"/>
    </div>
         
