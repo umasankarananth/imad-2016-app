@@ -109,7 +109,18 @@ function loadLogin () {
 
 
 var currentArticleTitle = window.location.pathname.split('/')[2];
-var submit = document.getElementById('commentsub_btn');
+
+var commentobj =`
+<h4>Enter your comments</h4>
+  <div>    
+    <textarea  id = "comment" rows ="5" cols="100" placeholder="Give comments here"/></textarea><br/><br/>
+     <input type="submit" value= "submit" id="commentsub_btn"/>
+   </div>
+   <br/>
+   `;
+    document.getElementById('comment_form').innerHTML = commentobj;
+    
+   var submit = document.getElementById('commentsub_btn');
     submit.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
