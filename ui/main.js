@@ -107,7 +107,7 @@ function loadLogin () {
     request.send(null);
 }
 
-
+loadLogin();
 var currentArticleTitle = window.location.pathname.split('/')[2];
 var submit = document.getElementById('commentsub_btn');
     submit.onclick = function () {
@@ -140,4 +140,4 @@ var submit = document.getElementById('commentsub_btn');
     };
 }
 
-loadLogin();
+
