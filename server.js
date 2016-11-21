@@ -69,7 +69,8 @@ var fruitTemplate =`
       ${fruitinfo}
  </div>
  <h4>Enter your comments</h4>
-  <div>     <textarea  id = "comment" rows ="5" cols="100" placeholder="Give comments here"/></textarea><br/><br/>
+  <div>    
+    <textarea  id = "comment" rows ="5" cols="100" placeholder="Give comments here"/></textarea><br/><br/>
      <input type="submit" value= "submit" id="commentsub_btn"/>
    </div>
         
@@ -199,10 +200,8 @@ app.post('/submit-comment/:articleName', function (req, res) {
                 } else {
                     var articId = result.rows[0].id;
                     // Now insert the right comment for this article
-                    pool.query(
-                        "INSERT INTO comment (comment, articleId, usrId) VALUES ($1, $2, $3)",
-                        [req.body.comment, articId, req.session.auth.userId],
-                        function (err, result) {
+                    pool.query("INSERT INTO comment (comment, articleId, usrId) VALUES ($1, $2, $3)",
+                               [req.body.comment, articId, req.session.auth.userId],function (err, result) {
                             if (err) {
                                 res.status(500).send(err.toString());
                             } else {
