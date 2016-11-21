@@ -107,18 +107,20 @@ function loadLogin () {
     request.send(null);
 }
 
+loadLogin();
 
 var currentArticleTitle = window.location.pathname.split('/')[2];
-
-var commentobj =`
+function commentFormHtml(){
+var commentobj = document.getElementById('comment_form');
+commentobj.innerHTML = `
 <h4>Enter your comments</h4>
      
-    <textarea  id = "comment" rows ="5" cols="100" placeholder="Give comments here"/></textarea><br/><br/>
-     <input type="submit" value= "submit" id="commentsub_btn"/>
+    <textarea  id = "commentText" rows ="5" cols="100" placeholder="Give comments here"/></textarea><br/><br/>
+     <input type="submit" value= "Submit" id="commentsub_btn"/>
    
    <br/>
    `;
-    document.getElementById('comment_form').innerHTML = commentobj;
+}
     
    var submit = document.getElementById('commentsub_btn');
     submit.onclick = function () {
@@ -131,7 +133,7 @@ var commentobj =`
                 // Take some action
                 if (request.status === 200) {
                     // clear the form & reload all the comments
-                    document.getElementById('comment').value = '';
+                    document.getElementById('commentText').value = '';
                    // loadComments();    
                 } else {
                     alert('Error! Could not submit comment');
@@ -142,7 +144,7 @@ var commentobj =`
     };
     
             // Make the request
-        var comm = document.getElementById('comment').value;
+        var comm = document.getElementById('commentText').value;
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comm}));  
@@ -151,4 +153,4 @@ var commentobj =`
     };
 }
 
-loadLogin();
+
