@@ -107,7 +107,7 @@ function loadLogin () {
     request.send(null);
 }
 
-loadLogin();
+
 
 var currentArticleTitle = window.location.pathname.split('/')[2];
 function commentFormHtml(){
@@ -120,7 +120,7 @@ commentobj.innerHTML = `
    
    <br/>
    `;
-}
+
     
    var submit = document.getElementById('commentsub_btn');
     submit.onclick = function () {
@@ -150,7 +150,8 @@ commentobj.innerHTML = `
         request.send(JSON.stringify({comment: comm}));  
         submit.value = 'Submitting...';
         
-    };
+    
 }
 
-
+loadLogin();
+commentFormHtml();
