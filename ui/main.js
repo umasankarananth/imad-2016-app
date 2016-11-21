@@ -107,7 +107,7 @@ function loadLogin () {
     request.send(null);
 }
 
-loadLogin();
+
 
 var submit = document.getElementById('commentsub_btn');
     submit.onclick = function () {
@@ -140,3 +140,4 @@ var submit = document.getElementById('commentsub_btn');
     };
 }
 
+loadLogin();
