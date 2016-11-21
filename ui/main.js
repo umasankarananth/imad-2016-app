@@ -109,3 +109,23 @@ function loadLogin () {
 
 loadLogin();
 
+var submit = document.getElementById('commentsub_btn');
+    submit.onclick = function () {
+        // Create a request object
+        var request = new XMLHttpRequest();
+        
+        // Capture the response and store it in a variable
+        request.onreadystatechange = function () {
+          if (request.readyState === XMLHttpRequest.DONE) {
+                // Take some action
+                if (request.status === 200) {
+                    // clear the form & reload all the comments
+                    document.getElementById('comment').value = '';
+                   // loadComments();    
+                } else {
+                    alert('Error! Could not submit comment');
+                }
+                submit.value = 'Submit';
+          }
+        };
+    };
