@@ -112,18 +112,19 @@ function loadLogin () {
 var currentArticleTitle = window.location.pathname.split('/')[2];
 function commentFormHtml(){
 var commentobj =`
-
-<h4>Enter your comments</h4>
-     
+<html>
+<body>
+    <h4>Enter your comments </h4>
     <textarea  id="commentText" rows ="5" cols="100" placeholder="Give comments here"/></textarea><br/><br/>
      <input type="submit" value= "Submit" id="commentsub_btn"/>
    
    <br/>
+   </body>
+   </html>
    `;
-
       document.getElementById('comment_form').innerHTML = commentobj;
-   var submit = document.getElementById('commentsub_btn');
-    submit.onclick = function () {
+   var sub = document.getElementById('commentsub_btn');
+    sub.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
         
@@ -138,7 +139,7 @@ var commentobj =`
                 } else {
                     alert('Error! Could not submit comment');
                 }
-                submit.value = 'Submit';
+                sub.value = 'Submit';
           }
         };
     };
@@ -148,7 +149,7 @@ var commentobj =`
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comm}));  
-        submit.value = 'Submitting...';
+        sub.value = 'Submitting...';
         
     
 }
