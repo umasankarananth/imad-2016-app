@@ -135,7 +135,7 @@ var submit = document.getElementById('commentsub_btn');
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comm}));  
-    commentsub_btn.value = 'Submitting...';
+        submit.value = 'Submitting...';
         
     };
 }
