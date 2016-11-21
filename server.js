@@ -73,7 +73,7 @@ var fruitTemplate =`
               </div>
 
  <script type="text/javascript" src="/ui/main.js">
-        
+      </script>  
 </body>
 </html>
  `;
