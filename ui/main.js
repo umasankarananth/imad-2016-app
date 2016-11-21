@@ -167,7 +167,7 @@ function loadLoginNext () {
             } 
         }
     };
-    console.log('function loadloginnext');
+    
     request.open('GET', '/check-login', true);
     request.send(null);
 }
