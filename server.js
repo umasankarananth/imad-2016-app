@@ -74,7 +74,14 @@ var fruitTemplate =`
               <div id="comments">
                 <center>Loading comments...</center>
               </div>
-            </div>
+            
+        Submit a comment
+       
+        <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
+        <br/>
+        <input type="submit" id="submit" value="Submit" />
+        <br/>
+                   </div>
          </div>
         
 </body>
