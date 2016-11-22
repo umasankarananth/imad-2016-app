@@ -76,8 +76,7 @@ var fruitTemplate =`
         <br/>
              
 </div>
- <script type="text/javascript" src="/ui/fruitJS.js">
- </script>
+ 
 </body>
 </html>
  `;
@@ -222,6 +221,10 @@ app.post('/submit-comment/:articleName', function (req, res) {
 
 app.get('/ui/main.js', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+
+app.get('/ui/fruitJS.js', function(req,res){
+    res.sendFile(path.join(__dirname, 'ui', 'fruitJS.js'));
 });
 
 app.get('/ui/welcomeform', function(req,res){
