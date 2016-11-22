@@ -29,6 +29,7 @@
                  </div>
          <script>
          var currentArticleTitle = window.location.pathname.split('/')[2];
+         function loadcommentform(){
          var sub = document.getElementById('commentsub_btn');
          sub.onclick = function () {
         // Create a request object
@@ -56,7 +57,7 @@
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comm}));  
         sub.value = 'Submitting...';
-        
+         }         
         function loadLoginNext () {
     
     // Check if the user is already logged in
