@@ -68,7 +68,8 @@ var fruitTemplate =`
   <div align="justify">
       ${fruitinfo}
  </div>
- 
+ <script src="ui/main.js">
+ </script>
 </body>
 </html>
  `;
