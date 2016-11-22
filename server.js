@@ -225,9 +225,6 @@ app.get('/ui/main.js', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/fruitJS.js', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'fruitJS.js'));
-});
 
 app.get('/welcomeform', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'welcomeform.html'));
