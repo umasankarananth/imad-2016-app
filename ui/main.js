@@ -110,7 +110,7 @@ function loadLogin () {
 
 //Submit username/password to login
 var currentArticleTitle = window.location.pathname.split('/')[2];
-window.alert(currentArticleTitle);
+//window.alert('currentArticleTitle');
 function loadCommentForm () {
         window.alert('loadCommentFrm  is called');
        var submit = document.getElementById('submit');
@@ -136,7 +136,7 @@ function loadCommentForm () {
   
 // Make the request
         var comment = document.getElementById('comment_text').value;
-      //  window.alert(currentArticleTitle);
+        window.alert(currentArticleTitle);
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
