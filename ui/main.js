@@ -111,12 +111,13 @@ function loadLogin () {
 function loadCommentForm () {
     var commentFormHtml = `
         <h5>Submit a comment</h5>
+        <input type = "text"/>
         <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
         <br/>
         <input type="submit" id="submit" value="Submit" />
         <br/>
         `;
-        var obj = document.getElementById('comment_form');
+        var obj = document.getElementById('commentform');
        obj.innerHTML = commentFormHtml;
     
     
@@ -128,9 +129,8 @@ function loadLoginNext() {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                
-                window.alert('loginnext is loaded');
-            loadCommentForm();
+                loadCommentForm();
+                 window.alert('loginnext is loaded');
             }
         }
     };
