@@ -69,11 +69,13 @@ var fruitTemplate =`
       ${fruitinfo}
  </div>
  <h4>Comments</h4>
+  <div>
+        <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
+        <br/>
+        <input type="submit" id="submit" value="Submit" />
+        <br/>
              
-              <div id="commentform">
-              </div>
-             
-
+</div>
  <script type="text/javascript" "src="/ui/fruitJS.js">
  </script>
 </body>
