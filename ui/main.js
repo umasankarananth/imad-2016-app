@@ -112,7 +112,7 @@ function loadLogin () {
 var currentArticleTitle = window.location.pathname.split('/')[2];
 
 function loadCommentForm () {
-        window.alert('fruitJs  is called');
+        window.alert('loadCommentFrm  is called');
        var submit = document.getElementById('submit');
        submit.onclick = function () {
         // Create a request object
