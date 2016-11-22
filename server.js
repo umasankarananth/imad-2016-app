@@ -70,7 +70,8 @@ var fruitTemplate =`
  </div>
  <h4>Comments</h4>
              
-              <p id='comment_form'></p>
+              <div id="commentform">
+              </div>
              
 
  <script src="ui/main.js">
