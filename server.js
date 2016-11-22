@@ -74,7 +74,7 @@ var fruitTemplate =`
               </div>
              
 
- <script src="ui/fruitJS.js">
+ <script  "src="/ui/fruitJS.js">
  </script>
 </body>
 </html>
