@@ -1,4 +1,4 @@
-Submit username/password to login
+//Submit username/password to login
 var currentArticleTitle = window.location.pathname.split('/')[2];
 
 function loadCommentForm () {
