@@ -116,7 +116,7 @@ function loadLoginNext() {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 window.alert('loginnext is loaded');
-                loadCommentForm();
+               // loadCommentForm();
                  
             }
         }
