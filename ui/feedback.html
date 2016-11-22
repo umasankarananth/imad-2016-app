@@ -65,6 +65,7 @@
         request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
+                res.send('you logged in');
                 commentformhtml(this.responseText);
             } 
         }
