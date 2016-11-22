@@ -116,7 +116,8 @@ function loadCommentForm () {
         <input type="submit" id="submit" value="Submit" />
         <br/>
         `;
-    document.getElementById('comment_form').innerHTML = commentFormHtml;
+        var obj = document.getElementById('comment_form');
+       obj.innerHTML = commentFormHtml;
     
     
 }
@@ -127,8 +128,9 @@ function loadLoginNext() {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                //loadCommentForm(this.responseText);
+                
                 window.alert('loginnext is loaded');
+            loadCommentForm();
             }
         }
     };
@@ -140,4 +142,4 @@ function loadLoginNext() {
 
 loadLogin();
 loadLoginNext();
-loadCommentForm();
+//loadCommentForm();
