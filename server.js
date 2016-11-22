@@ -223,19 +223,19 @@ app.get('/ui/main.js', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/ui/fruitJS.js', function(req,res){
+app.get('/fruitJS.js', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'fruitJS.js'));
 });
 
-app.get('/ui/welcomeform', function(req,res){
+app.get('/welcomeform', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'welcomeform.html'));
 });
 
-app.get('/ui/fruitmenu', function(req,res){
+app.get('/fruitmenu', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'fruitmenu.html'));
 });
 
-app.get('/ui/feedback', function(req,res){
+app.get('/feedback', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'feedback.html'));
 });
 
