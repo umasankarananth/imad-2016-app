@@ -192,8 +192,8 @@ app.get('/fruits/:frname', function(req,res){
 
 app.post('/submit-comment/:articleName', function (req, res) {
     var articleName = req.params.articleName;
-    window.alert('submitcomment is invoked');
-    window.alert(articleName);
+    console.log('submitcomment is invoked');
+    console.log(articleName);
    // Check if the user is logged in
     if (req.session && req.session.auth && req.session.auth.userId) {
         // First check if the article exists and get the article-id
