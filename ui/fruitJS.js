@@ -1,6 +1,6 @@
 //Submit username/password to login
 var currentArticleTitle = window.location.pathname.split('/')[2];
-
+window.alert('fruitJs enters');
 function loadCommentForm () {
         window.alert('fruitJs  is called');
        var submit = document.getElementById('submit');
