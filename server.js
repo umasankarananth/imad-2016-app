@@ -224,7 +224,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
 });
 
 
-app.get('/ui/fruitJS.js', function(req,res){
+app.get('/fruitJS.js', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'fruitJS.js'));
 });
 
