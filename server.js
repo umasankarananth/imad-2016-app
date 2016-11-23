@@ -191,7 +191,7 @@ app.get('/fruits/:frname', function(req,res){
 });
 
 app.post('/submit-comment/:articleName', function (req, res) {
-   // var articleName = req.params.articleName;
+    var articleName = req.params.articleName;
     window.alert('submitcomment is invoked');
     window.alert(articleName);
    // Check if the user is logged in
