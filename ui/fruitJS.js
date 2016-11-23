@@ -25,7 +25,7 @@ function loadCommentForm () {
                 if (request.status === 200) {
                     // clear the form & reload all the comments
                     document.getElementById('comment_text').value ="";
-                    //loadComments();    
+                    loadComments();    
                 } else {
                     alert('Error! Could not submit comment');
                 }
