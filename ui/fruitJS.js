@@ -39,7 +39,7 @@ function loadCommentForm () {
         window.alert('submitcomment is going to call');
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({comment: comment}));  
+        //request.send(JSON.stringify({comment: comment}));  
         submit.value = 'Submitting...';
         
     };
