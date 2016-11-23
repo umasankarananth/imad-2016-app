@@ -207,6 +207,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                     res.status(400).send('Article not found');
                 } else {
                     var articId = result.rows[0].id;
+                    console.log(articId);
                     // Now insert the right comment for this article
                     pool.query("INSERT INTO comment (articleId, usrId,comment) VALUES ($1, $2, $3)",
                                [articId, req.session.auth.userId, req.body.comment],function (err, result) {
