@@ -192,9 +192,9 @@ app.get('/fruits/:frname', function(req,res){
 });
 
 app.post('/submit-comment/:articleName', function (req, res) {
-    var articleName = req.params.articleName;
+   // var articleName = req.params.articleName;
     window.alert('submitcomment is invoked');
-    window.alert(articleName);
+   // window.alert(articleName);
    // Check if the user is logged in
     if (req.session && req.session.auth && req.session.auth.userId) {
         // First check if the article exists and get the article-id
@@ -207,8 +207,8 @@ app.post('/submit-comment/:articleName', function (req, res) {
                 } else {
                     var articId = result.rows[0].id;
                     // Now insert the right comment for this article
-                    pool.query("INSERT INTO comment (comment, articleId, usrId) VALUES ($1, $2, $3)",
-                               [req.body.comment, articId, req.session.auth.userId],function (err, result) {
+                    pool.query("INSERT INTO comment (articleId, usrId,comment) VALUES ($1, $2, $3)",
+                               [articId, req.session.auth.userId, req.body.comment],function (err, result) {
                             if (err) {
                                 res.status(500).send(err.toString());
                             } else {
@@ -222,12 +222,6 @@ app.post('/submit-comment/:articleName', function (req, res) {
         res.status(403).send('Only logged in users can comment');
     }
 });
-
-
-app.get('/fruitJS.js', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'fruitJS.js'));
-});
-
 
 app.get('/welcomeform', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'welcomeform.html'));
