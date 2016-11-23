@@ -75,14 +75,7 @@ var fruitTemplate =`
               <div id="comments">
                 <center>Loading comments...</center>
               </div>
-
-  
-        <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
         <br/>
-        <input type="submit" id="submit" value="Submit" />
-        <br/>
-             
-
    <script  src="/ui/fruitJS.js">
     </script>
 </body>
