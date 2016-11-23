@@ -55,5 +55,5 @@ function loadLogin() {
     request.send(null);
 }
 
-loadLoginNext();
+loadLogin();
 //loadCommentForm();
