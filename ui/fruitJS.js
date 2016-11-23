@@ -4,6 +4,15 @@ window.alert(currentArticleTitle);
 window.alert('fruitJs enters');
 function loadCommentForm () {
         window.alert('fruitJs  is called');
+         var commentFormHtml = `
+        <h5>Submit a comment</h5>
+        <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
+        <br/>
+        <input type="submit" id="submit" value="Submit" />
+        <br/>
+        `;
+       document.getElementById('comment_form').innerHTML = commentFormHtml;
+
        var submit = document.getElementById('submit');
        submit.onclick = function () {
         // Create a request object
@@ -29,8 +38,8 @@ function loadCommentForm () {
         var comment = document.getElementById('comment_text').value;
         window.alert('submitcomment is going to call');
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
-       // request.setRequestHeader('Content-Type', 'application/json');
-        //request.send(JSON.stringify({comment: comment}));  
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.send(JSON.stringify({comment: comment}));  
         submit.value = 'Submitting...';
         
     };
