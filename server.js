@@ -197,7 +197,9 @@ app.post('/submit-comment/:articleName', function (req, res) {
    // Check if the user is logged in
     if (req.session && req.session.auth && req.session.auth.userId) {
         // First check if the article exists and get the article-id
+        console.log('article exists');
         pool.query("SELECT * from fruitprice where fruitname = '"+ articleName+"'", function (err, result) {
+            console.log('query executed');
             if (err) {
                 res.status(500).send(err.toString());
             } else {
