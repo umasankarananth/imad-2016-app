@@ -212,6 +212,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
         console.log('article exists');
         pool.query("SELECT * from fruitprice where fruitname = '"+ articleName+"'", function (err, result) {
             console.log('query executed');
+            console.log("SELECT * from fruitprice where fruitname = '"+ articleName+"'");
             if (err) {
                 res.status(500).send(err.toString());
             } else {
