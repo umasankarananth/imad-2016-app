@@ -40,6 +40,7 @@ function loadCommentForm () {
         request.setRequestHeader('Content-Type', 'application/json');
        // request.send(JSON.stringify({comment: comment}));  
         window.alert(comment);
+        window.alert(currentArticleTitle);
         submit.value = 'Submitting...';
         
     };
