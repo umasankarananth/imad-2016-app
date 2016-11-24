@@ -212,7 +212,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
         console.log('article exists');
         pool.query("SELECT * from fruitprice where fruitname = '"+ articleName+"'", function (err, result) {
             console.log('query executed');
-            console.log("SELECT * from fruitprice where fruitname = '"+ articleName+"'");
+            
             if (err) {
                 res.status(500).send(err.toString());
             } else {
@@ -221,6 +221,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                 } else {
                     var articId = result.rows[0].id;
                     console.log(articId);
+                    console.log(req.body.comment);
                     // Now insert the right comment for this article
                     pool.query("INSERT INTO comment (articleId, usrId,comment) VALUES ($1, $2, $3)",
                                [articId, req.session.auth.userId, req.body.comment],function (err, result) {
