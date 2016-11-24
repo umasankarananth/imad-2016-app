@@ -1,9 +1,8 @@
 //Submit username/password to login
 var currentArticleTitle = window.location.pathname.split('/')[2];
 window.alert(currentArticleTitle);
-window.alert('fruitJs enters');
 function loadCommentForm () {
-        window.alert('fruitJs  is called');
+        window.alert('loadcommentform  is called');
          var commentFormHtml = `
         <h5>Submit a comment</h5>
         <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
