@@ -37,6 +37,8 @@ function loadCommentForm () {
         // Make the request
         var comment = document.getElementById('comment_text').value;
         comment.innerHTML ='comment submitted';
+                request.open('POST', '/submit-comment/' + currentArticleTitle, true);
+                        submit.value = 'Submitting...';
 
 };
 }
