@@ -190,7 +190,7 @@ app.get('/get-comments/:articleName', function (req, res) {
     console.log(articleName);
    // make a select request
    // return a response with the results
-    pool.query('SELECT comment.*, "user".username FROM fruitprice, comment, "user" WHERE fruitprice.fruitname = $1 AND fruitprice.id = comment.articleId AND comment.usrId = "user".id ORDER BY comment.timestamp DESC', [req.params.articleName], function (err, result){
+    pool.query('SELECT comment.*, "user".username FROM fruitprice, comment, "user" WHERE fruitprice.fruitname = $1 AND fruitprice.id = comment.articleId AND comment.usrId = "user".id ORDER BY comment.timestamp DESC', [articleName], function (err, result){
   // pool.query('SELECT * FROM comment',function(err,result){
       
       if (err) {
