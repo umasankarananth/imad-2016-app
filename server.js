@@ -200,11 +200,11 @@ app.post('/submit-comment/:articleName', function (req, res) {
                 if (result.rows.length === 0) {
                     res.status(400).send('Article not found');
                 } else {
-                    var articleId = result.rows[0].id;
+                    var articId = result.rows[0].id;
                     // Now insert the right comment for this article
-                    console.log(articleId);
+                    console.log(articId);
                     console.log(req.body.comment);
-          pool.query("INSERT INTO comment (comment, articleId, usrId) VALUES ($1, $2, $3)",[req.body.comment, articleId, req.session.auth.userId], function (err, result) {
+          pool.query('INSERT INTO comment (comment, articleId, usrId) VALUES ($1, $2, $3)',[req.body.comment, articId, req.session.auth.userId], function (err, result) {
               console.log(result);
                             if (err) {
                                 res.status(500).send(err.toString());
