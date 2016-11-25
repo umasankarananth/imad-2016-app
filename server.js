@@ -187,45 +187,6 @@ app.get('/get-articles', function (req, res) {
 
 
 
-app.post('/submit-comment/:articleName', function (req, res) {
-    var articleName = req.params.articleName;
-    console.log('submitcomment is invoked');
-    console.log(articleName);
-   // Check if the user is logged in
-    if (req.session && req.session.auth && req.session.auth.userId) {
-        // First check if the article exists and get the article-id
-        console.log('article exists');
-        pool.query("SELECT * from fruitprice where fruitname = '"+ articleName+"'", function (err, result) {
-            console.log('query executed');
-            
-            if (err) {
-                res.status(500).send(err.toString());
-            } else {
-                if (result.rows.length === 0) {
-                    res.status(400).send('Article not found');
-                } else {
-                    var articid = result.rows[0].id;
-                   // var comment = req.body.comment;
-                    console.log(articId);
-                    
-                    // Now insert the right comment for this article
-                    pool.query('INSERT INTO comment (articleId, usrId,comment) VALUES ($1, $2, $3)',
-                               [articid, req.session.auth.userId, req.body.comment],function (err, result) {
-                            console.log('Insert query executed');       
-                            if (err) {
-                                res.status(500).send(err.toString());
-                            } else {
-                                res.status(200).send('Comment inserted!');
-                            }
-                        });
-                }
-            }
-       });     
-    } else {
-        res.status(403).send('Only logged in users can comment');
-    }
-});
-
 
 app.get('/fruits/:frname', function(req,res){
    var frname = req.params.frname;
