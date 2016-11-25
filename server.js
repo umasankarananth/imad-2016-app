@@ -202,7 +202,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                 } else {
                     var articleId = result.rows[0].id;
                     // Now insert the right comment for this article
-                   
+                    console.log(articleId);
           pool.query("INSERT INTO comment (comment, articleId, usrId) VALUES ($1, $2, $3)",[req.body.comment, articleId, req.session.auth.userId], function (err, result) {
                             console.log(result);
                             if (err) {
