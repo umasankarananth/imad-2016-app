@@ -99,7 +99,7 @@ app.get('/hash/:input',function(req,res)
   res.send(hashedString);
 });
 
-var pool = new Pool(config);
+
 app.post('/create-user',function(req,res){
    //username password
    //username : 'umasankar' password : 'ananth'
@@ -171,6 +171,21 @@ app.get('/logout', function(req,res){
    delete req.session.auth;
    res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
+
+var pool = new Pool(config);
+app.get('/get-articles', function (req, res) {
+   // make a select request
+   // return a response with the results
+   pool.query('SELECT * FROM fruitprice', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
+
+
 
 app.post('/submit-comment/:articleName', function (req, res) {
     var articleName = req.params.articleName;
