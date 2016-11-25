@@ -38,8 +38,7 @@ function loadCommentForm () {
         
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
-        var a = JSON.stringify({comment: comment});  
-        request.send(a);
+         request.send(JSON.stringify(comment));  
         window.alert(comment);
         window.alert(currentArticleTitle);
         submit.value = 'Submitting...';
