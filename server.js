@@ -194,6 +194,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
     if (req.session && req.session.auth && req.session.auth.userId) {
         // First check if the article exists and get the article-id
         pool.query('SELECT * from fruitprice where fruitname = $1', [req.params.articleName], function (err, result) {
+            console.log(result);
             if (err) {
                 res.status(500).send(err.toString());
             } else {
