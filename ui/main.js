@@ -135,6 +135,5 @@ function loadArticles () {
 }
 
 
-
-
 loadLogin();
+loadArticles();
