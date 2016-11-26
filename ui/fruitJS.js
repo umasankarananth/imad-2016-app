@@ -24,7 +24,7 @@ function loadCommentForm () {
                 // Take some action
                 if (request.status === 200) {
                     // clear the form & reload all the comments
-                     alert('comment entered');
+                    // alert('comment entered');
                     document.getElementById('comment_text').value = '';
                     loadComments();    
                 } else {
@@ -72,6 +72,7 @@ function escapeHTML (text)
 
 function loadComments () {
         // Check if the user is already logged in
+        alert('loadcomments enters');
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
