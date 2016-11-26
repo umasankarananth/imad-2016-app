@@ -1,8 +1,8 @@
 //Submit username/password to login
 var currentArticleTitle = window.location.pathname.split('/')[2];
-window.alert(currentArticleTitle);
+//window.alert(currentArticleTitle);
 function loadCommentForm () {
-        window.alert('loadcommentform  is called');
+        //window.alert('loadcommentform  is called');
          var commentFormHtml = `
         <h5>Submit a comment</h5>
         <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
@@ -49,7 +49,7 @@ function loadLogin() {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                window.alert('loginnext is loaded');
+                //window.alert('login is loaded');
                 loadCommentForm(this.responseText);
                  
             }
