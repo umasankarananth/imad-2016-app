@@ -242,7 +242,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
 
 app.get('/fruits/:frname', function(req,res){
    var frname = req.params.frname;
-   pool.query("SELECT * FROM fruitprice where fruitname = '"+ frname +"'", function(err,result){
+   pool.query('SELECT * FROM fruitprice where fruitname =$1', [req.params.fname], function(err,result){
       if (err){
           res.status(500).send(err.toString());
       }else{
