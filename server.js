@@ -193,7 +193,6 @@ app.get('/get-comments/:articleName', function (req, res) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
-         // res.send(JSON.stringify(result.rows));
           res.send(JSON.stringify(result.rows));
       }
    });
@@ -203,10 +202,7 @@ app.get('/get-comments/:articleName', function (req, res) {
 
 
 app.post('/submit-comment/:articleName', function (req, res) {
-     var articleName = req.params.articleName;
-    console.log('submitcomment is invoked');
-    console.log(articleName);
-
+    
    // Check if the user is logged in
     if (req.session && req.session.auth && req.session.auth.userId) {
         // First check if the article exists and get the article-id
@@ -219,11 +215,8 @@ app.post('/submit-comment/:articleName', function (req, res) {
                 } else {
                     var articId = result.rows[0].id;
                     // Now insert the right comment for this article
-                    console.log(articId);
-                    console.log(req.body.comment);
-          pool.query('INSERT INTO comment (comment, articleid, usrid) VALUES ($1, $2, $3)',[req.body.comment, articId, req.session.auth.userId], function (err, result) {
-          //pool.query('INSERT INTO comment (comment, articleid, usrid) VALUES req.body.comment, articId, req.session.auth.userId', //function (err, result) {
-              console.log(result);
+                  pool.query('INSERT INTO comment (comment, articleid, usrid) VALUES ($1, $2, $3)',[req.body.comment, articId, req.session.auth.userId], function (err, result) {
+                      console.log(result);
                             if (err) {
                                 res.status(500).send(err.toString());
                             } else {
