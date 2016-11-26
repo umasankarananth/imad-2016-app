@@ -193,13 +193,13 @@ app.get('/get-articles', function (req, res) {
    // return a response with the results
    // pool.query('SELECT comment.*, "user".username FROM fruitprice, comment, "user" WHERE fruitprice.fruitname = $1 AND fruitprice.id = //comment.articleId AND comment.usrId = "user".id ORDER BY comment.timestamp DESC', [req.params.articleName], function (err, result//){
    app.get('/get-comments',function(req,res){
-   pool.query('SELECT fruitprice.*, comment.* FROM fruitprice,comment where comment.articleId =  fruitprice.id',function(err,result){
+   pool.query('SELECT fruitprice.*, comment.* FROM fruitprice,comment where fruitprice.id=comment.articleId =',function(err,result){
       console.log(result);
       if (err) {
           res.status(500).send(err.toString());
       } else {
          // res.send(JSON.stringify(result.rows));
-          res.send(JSON.stringify(result.rows));
+          res.send(JSON.stringify(result.rows[0]));
       }
    });
 });
