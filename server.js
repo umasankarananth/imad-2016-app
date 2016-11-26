@@ -186,7 +186,7 @@ app.get('/get-articles', function (req, res) {
 });
 
 app.get('/get-comments/:articleName', function (req, res) {
-    
+    var articleName = req.params.articleName;
     console.log(articleName);
    // make a select request
    // return a response with the results
