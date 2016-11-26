@@ -222,7 +222,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                     console.log(articId);
                     console.log(req.body.comment);
           //pool.query('INSERT INTO comment (comment, articleId, usrId) VALUES ($1, $2, $3)',[req.body.comment, articId, req.session.auth//.userId], function (err, result) {
-          pool.query('INSERT INTO comment (comment, articleId, usrId) VALUES req.body.comment, articId, req.session.auth.userId', function (err, result) {
+          pool.query('INSERT INTO comment (comment, articleid, usrid) VALUES req.body.comment, articId, req.session.auth.userId', function (err, result) {
               console.log(result);
                             if (err) {
                                 res.status(500).send(err.toString());
