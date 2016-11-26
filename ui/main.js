@@ -116,6 +116,7 @@ function loadArticles () {
             var articles = document.getElementById('articles');
             if (request.status === 200) {
               //  var content = '<ul>';
+                  var content = ' ';
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
                     content += `<li>
