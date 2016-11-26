@@ -37,6 +37,7 @@ body {
 .commenter {
     font-style: italic;
     font-size: 0.8em;
+    color:white;
 }
 
 #comment_form {
