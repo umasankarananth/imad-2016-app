@@ -233,11 +233,9 @@ app.post('/submit-comment/:articleName', function (req, res) {
 });
 
 
-var counter = 0;
 app.get('/fruits/:frname', function(req,res){
-   var frname = req.params.frname;
-   counter = counter + 1;
-   pool.query('SELECT * FROM fruitprice where fruitname =$1', [req.params.frname], function(err,result){
+  var frname = req.params.frname;
+    pool.query('SELECT * FROM fruitprice where fruitname =$1', [req.params.frname], function(err,result){
       if (err){
           res.status(500).send(err.toString());
       }else{
@@ -247,7 +245,6 @@ app.get('/fruits/:frname', function(req,res){
                
                var frutData =result.rows[0];
                res.send(create(frutData));
-               res.send(counter.toString());
                 } 
      
           }
