@@ -23,7 +23,7 @@
           if (request.readyState === XMLHttpRequest.DONE) {
               // Take some action
               if (request.status === 200) {
-                  //submit.value = 'Success!';
+                  submit.value = 'Success!';
                   alert('Success Logged in :' + this.responseText);
                   } else if (request.status === 403) {
                  // submit.value = 'Invalid credentials. Try again?';
@@ -47,8 +47,8 @@
         console.log(password);
         request.open('POST', '/login', true);
         request.setRequestHeader('Content-Type', 'application/json');
-      //  request.send(JSON.stringify({username: username, password: password}));  
-          request.send(JSON.stringify({username: ' ' , password: ' '}));  
+        request.send(JSON.stringify({username: username, password: password}));  
+        //  request.send(JSON.stringify({username: ' ' , password: ' '}));  
         submit.value = 'Logging in...';
         
     };
@@ -79,8 +79,8 @@
         console.log(password);
         request.open('POST', '/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
-       // request.send(JSON.stringify({username: username, password: password}));  
-        request.send(JSON.stringify({username: ' ', password: ' '}));  
+        request.send(JSON.stringify({username: username, password: password}));  
+       // request.send(JSON.stringify({username: ' ', password: ' '}));  
         register.value = 'Registering...';
     
     };
