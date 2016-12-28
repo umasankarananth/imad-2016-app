@@ -167,6 +167,7 @@ else{
           }
       }      
   });
+}
 });
 
 app.get('/check-login', function(req,res){
