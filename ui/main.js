@@ -45,16 +45,16 @@
         var password = document.getElementById('password').value;
         console.log(username);
         console.log(password);
-        if (username === '' || password === '') {
+  //      if (username === '' || password === '') {
         // Inform the user on the screen through some message or give him a alert message
-        alert("Username/Password field can't be left empty");
-        return;
-        }
+  //      alert("Username/Password field can't be left empty");
+   //     return;
+//        }
 
         request.open('POST', '/login', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
-        //  request.send(JSON.stringify({username: ' ' , password: ' '}));  
+       // request.send(JSON.stringify({username: username, password: password}));  
+          request.send(JSON.stringify({username: ' ' , password: ' '}));  
         submit.value = 'Logging in...';
         
     };
@@ -83,16 +83,16 @@
         var password = document.getElementById('password').value;
         console.log(username);
         console.log(password);
-        if (username === '' || password === '') {
+      //  if (username === '' || password === '') {
         // Inform the user on the screen through some message or give him a alert message
-        alert("Username/Password field can't be left empty");
-        return;
-        }
+      //  alert("Username/Password field can't be left empty");
+     //   return;
+    //    }
 
         request.open('POST', '/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
-       // request.send(JSON.stringify({username: ' ', password: ' '}));  
+       // request.send(JSON.stringify({username: username, password: password}));  
+        request.send(JSON.stringify({username: ' ', password: ' '}));  
         register.value = 'Registering...';
     
     };
